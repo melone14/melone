@@ -2,13 +2,29 @@ import { GlobalStyle } from 'assets/styles/GlobalStyle';
 import { ThemeProvider } from 'styled-components';
 import { theme } from 'assets/styles/theme';
 import Navigation from 'components/organisms/Navigation/Navigation';
+import MainTemplate from 'components/templates/MainTemplate/MainTemplate';
+import styled from 'styled-components';
+import bg from 'assets/images/background.jpeg';
+
+const TestBgImg = styled.img`
+  height: 100vh;
+  width: 100%;
+  display: block;
+`;
 
 const Root = () => (
   <div>
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <Navigation />
-      <h1>Siemanko</h1>
+      <MainTemplate>
+        <TestBgImg src={bg} />
+        <h1>Siema</h1>
+        <h1>Siema</h1>
+        <h1>Siema</h1>
+        <h1>Siema</h1>
+        <h1>Siema</h1>
+      </MainTemplate>
     </ThemeProvider>
   </div>
 );
