@@ -11,6 +11,11 @@ export const NavigationWrapper = styled.nav`
   font-size: 17px;
   position: fixed;
   top: 0;
+  transition: all 0.5s ease-in-out;
+
+  &.active {
+    background: rgba(255, 255, 255, 0.7);
+  }
 `;
 
 export const Logo = styled.img`
@@ -27,7 +32,16 @@ export const NavList = styled.ul`
   justify-content: center;
   align-items: center;
   /* border: 1px solid blue; */
-  padding-left: 100px;
+  padding-left: 50px;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+  right: 1000px;
+
+  &.active {
+    opacity: 1;
+    right: 0;
+  }
 `;
 
 export const NavListItem = styled.li`
@@ -40,12 +54,21 @@ export const NavIconsWrapper = styled.ul`
   display: flex;
   align-items: center;
   padding-left: 10px;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  left: 1000px;
+  position: relative;
+
+  &.active {
+    opacity: 1;
+    left: 0;
+  }
 `;
 
 export const Icon = styled.div`
   width: 30px;
   height: 30px;
-  margin-left: 9px;
+  margin-left: 12px;
   cursor: pointer;
   background-image: ${({ icon }) => (icon ? `url(${icon})` : '')};
 `;
@@ -55,6 +78,15 @@ export const SearchBarWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+  bottom: 200px;
+
+  &.active {
+    opacity: 1;
+    bottom: 0;
+  }
 `;
 
 export const SearchBarInput = styled.input`
