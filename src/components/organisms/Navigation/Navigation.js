@@ -7,11 +7,13 @@ import {
   Icon,
   SearchBarInput,
   SearchBarWrapper,
+  StyledLink,
 } from './Navigation.style';
 import { useEffect, useState } from 'react';
 import logo from 'assets/images/logo.png';
 import heart from 'assets/icons/heart.svg';
 import cart from 'assets/icons/cart.svg';
+import { Link } from 'react-router-dom';
 
 const Navigation = () => {
   const [navbarScroll, setNavbarScroll] = useState(false);
@@ -34,11 +36,19 @@ const Navigation = () => {
     <header>
       <NavigationWrapper className={navbarScroll ? 'active' : null}>
         <NavList className={navbarScroll ? 'active' : null}>
-          <NavListItem>KOBIETY</NavListItem>
-          <NavListItem>MĘŻCZYŹNI</NavListItem>
-          <NavListItem>WYPRZEDAŻ</NavListItem>
+          <NavListItem>
+            <StyledLink to="/kobiety">KOBIETY</StyledLink>
+          </NavListItem>
+          <NavListItem>
+            <StyledLink to="/mezczyzni">MĘŻCZYŹNI</StyledLink>
+          </NavListItem>
+          <NavListItem>
+            <StyledLink to="/wyprzedaz">WYPRZEDAŻ</StyledLink>
+          </NavListItem>
         </NavList>
-        <Logo src={logo} />
+        <Link to="/">
+          <Logo src={logo} />
+        </Link>
         <SearchBarWrapper className={navbarScroll ? 'active' : null}>
           <SearchBarInput placeholder="SZUKAJ" />
         </SearchBarWrapper>
