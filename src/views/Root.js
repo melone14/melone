@@ -5,6 +5,7 @@ import Navigation from 'components/organisms/Navigation/Navigation';
 import MainTemplate from 'components/templates/MainTemplate/MainTemplate';
 import styled from 'styled-components';
 import bg from 'assets/images/background.jpeg';
+import { Routes, Route } from 'react-router-dom';
 
 const TestBgImg = styled.img`
   height: 100vh;
@@ -18,7 +19,67 @@ const Root = () => (
       <GlobalStyle />
       <Navigation />
       <MainTemplate>
-        <TestBgImg src={bg} />
+        <Routes>
+          <Route path="/" element={<TestBgImg src={bg} />} />
+          <Route path="/kobiety" element={<h1>kobiety</h1>} />
+          <Route path="/mezczyzni" element={<h1>mezczyzni</h1>} />
+          <Route path="/wyprzedaz" element={<h1>wyprzedaz</h1>} />
+        </Routes>
+
+        <h1>Siema</h1>
+        <h1>Siema</h1>
+        <h1>Siema</h1>
+        <h1>Siema</h1>
+        <h1>Siema</h1>
+        <h1>Siema</h1>
+        <h1>Siema</h1>
+        <h1>Siema</h1>
+        <h1>Siema</h1>
+        <h1>Siema</h1>
+        <h1>Siema</h1>
+        <h1>Siema</h1>
+        <h1>Siema</h1>
+        <h1>Siema</h1>
+        <h1>Siema</h1>
+        <h1>Siema</h1>
+        <h1>Siema</h1>
+        <h1>Siema</h1>
+        <h1>Siema</h1>
+        <h1>Siema</h1>
+        <h1>Siema</h1>
+        <h1>Siema</h1>
+        <h1>Siema</h1>
+        <h1>Siema</h1>
+        <h1>Siema</h1>
+        <h1>Siema</h1>
+        <h1>Siema</h1>
+        <h1>Siema</h1>
+        <h1>Siema</h1>
+        <h1>Siema</h1>
+        <h1>Siema</h1>
+        <h1>Siema</h1>
+        <h1>Siema</h1>
+        <h1>Siema</h1>
+        <h1>Siema</h1>
+        <h1>Siema</h1>
+        <h1>Siema</h1>
+        <h1>Siema</h1>
+        <h1>Siema</h1>
+        <h1>Siema</h1>
+        <h1>Siema</h1>
+        <h1>Siema</h1>
+        <h1>Siema</h1>
+        <h1>Siema</h1>
+        <h1>Siema</h1>
+        <h1>Siema</h1>
+        <h1>Siema</h1>
+        <h1>Siema</h1>
+        <h1>Siema</h1>
+        <h1>Siema</h1>
+        <h1>Siema</h1>
+        <h1>Siema</h1>
+        <h1>Siema</h1>
+        <h1>Siema</h1>
         <h1>Siema</h1>
         <h1>Siema</h1>
         <h1>Siema</h1>

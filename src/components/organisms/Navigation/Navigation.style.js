@@ -1,11 +1,13 @@
 import styled from 'styled-components';
+import { NavLink } from 'react-router-dom';
 
 export const NavigationWrapper = styled.nav`
   background: rgba(255, 255, 255, 0);
   height: 85px;
   width: 100%;
   color: #383838;
-  border-bottom: 1px solid rgba(201, 201, 201, 0.9);
+  border-bottom: 0px solid white;
+  box-shadow: rgb(221, 221, 221) 0px -1px inset;
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1fr;
   font-size: 17px;
@@ -14,7 +16,7 @@ export const NavigationWrapper = styled.nav`
   transition: all 0.5s ease-in-out;
 
   &.active {
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.95);
   }
 `;
 
@@ -99,4 +101,24 @@ export const SearchBarInput = styled.input`
   padding-bottom: 2px;
   margin-left: 90px;
   font-family: 'Montserrat', sans-serif;
+
+  &::placeholder {
+    color: ${({ theme }) => theme.colors.grey};
+  }
+`;
+
+export const StyledLink = styled(NavLink)`
+  color: #383838;
+  text-decoration: none;
+  font-weight: 500;
+
+  &.active {
+    font-weight: 600;
+  }
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.grey};
+    border-bottom: 1px solid ${({ theme }) => theme.colors.grey};
+    padding-bottom: 10px;
+  }
 `;
