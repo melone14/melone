@@ -6,6 +6,7 @@ import MainTemplate from 'components/templates/MainTemplate/MainTemplate';
 import styled from 'styled-components';
 import bg from 'assets/images/background.jpeg';
 import { Routes, Route } from 'react-router-dom';
+import ProductCard from 'components/molecules/ProductCard/ProductCard';
 
 const TestBgImg = styled.img`
   height: 100vh;
@@ -29,6 +30,8 @@ const Root = () => (
         <h1>Siema</h1>
         <h1>Siema</h1>
         <h1>Siema</h1>
+        <ProductCard slider bestseller />
+        <ProductCard />
         <h1>Siema</h1>
         <h1>Siema</h1>
         <h1>Siema</h1>

@@ -111,6 +111,7 @@ export const StyledLink = styled(NavLink)`
   color: #383838;
   text-decoration: none;
   font-weight: 500;
+  transition: all 0.2s;
 
   &.active {
     font-weight: 600;
