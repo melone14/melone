@@ -2,9 +2,11 @@ export const theme = {
   colors: {
     white: '#FFFFFF',
     grey: '#a3a3a3',
+    lightGrey: '#f2f2f2',
     black: '#383838',
     success: '#8FCB81',
     error: '#CB8581',
+    orange: '#E85D00',
     warning: '#E1D888',
   },
   fontSize: {
