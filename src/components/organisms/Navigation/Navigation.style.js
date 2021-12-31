@@ -14,6 +14,7 @@ export const NavigationWrapper = styled.nav`
   position: fixed;
   top: 0;
   transition: all 0.5s ease-in-out;
+  z-index: 10;
 
   &.active {
     background: rgba(255, 255, 255, 0.95);
