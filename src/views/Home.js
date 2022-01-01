@@ -7,40 +7,11 @@ const Home = () => (
   <>
     <MainTemplate>
       <Image />
-      <h1>Siema</h1>
+      <Carousel />
       <h1>Siema</h1>
       <h1>Siema</h1>
       <ProductCard slider bestseller />
       <ProductCard />
-      <h1>Slider</h1>
-      <Carousel />
-      <h1>Siema</h1>
-      <h1>Siema</h1>
-      <h1>Siema</h1>
-      <h1>Siema</h1>
-      <h1>Siema</h1>
-      <h1>Siema</h1>
-      <h1>Siema</h1>
-      <h1>Siema</h1>
-      <h1>Siema</h1>
-      <h1>Siema</h1>
-      <h1>Siema</h1>
-      <h1>Siema</h1>
-      <h1>Siema</h1>
-      <h1>Siema</h1>
-      <h1>Siema</h1>
-      <h1>Siema</h1>
-      <h1>Siema</h1>
-      <h1>Siema</h1>
-      <h1>Siema</h1>
-      <h1>Siema</h1>
-      <h1>Siema</h1>
-      <h1>Siema</h1>
-      <h1>Siema</h1>
-      <h1>Siema</h1>
-      <h1>Siema</h1>
-      <h1>Siema</h1>
-      <h1>Siema</h1>
       <h1>Siema</h1>
       <h1>Siema</h1>
       <h1>Siema</h1>

@@ -19,16 +19,25 @@ export const ProductImage = styled.img`
   height: ${({ slider }) => (slider ? '291px' : '360px')};
 `;
 
+export const BestsellerWrapper = styled.div`
+  width: 100%;
+  height: 20px;
+  /* background: grey; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
 export const Bestseller = styled.p`
-  font-size: 12px;
+  font-size: 13px;
   text-align: center;
-  padding: 18px 0 10px;
+  /* padding: 18px 0 10px; */
   font-weight: 500;
   color: ${({ theme }) => theme.colors.orange};
 `;
 
 export const ProductTitle = styled.p`
-  font-size: 14px;
+  font-size: 15px;
   color: ${({ theme }) => theme.colors.black};
   text-align: center;
   font-weight: 500;
