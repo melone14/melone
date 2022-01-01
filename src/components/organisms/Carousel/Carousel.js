@@ -1,9 +1,14 @@
 import ProductCard from 'components/molecules/ProductCard/ProductCard';
 import Slider from 'react-slick';
-import { Wrapper } from './Carousel.style';
+import { Title, Wrapper } from './Carousel.style';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './style.css';
+
+import image1 from 'assets/images/1.png';
+import image2 from 'assets/images/2.png';
+import image3 from 'assets/images/3.png';
+import image4 from 'assets/images/4.png';
 
 const settings = {
   dots: true,
@@ -48,16 +53,17 @@ const settings = {
 };
 
 const Carousel = () => (
-  <Wrapper>
-    <Slider {...settings}>
-      <ProductCard slider bestseller />
-      <ProductCard slider />
-      <ProductCard slider bestseller />
-      <ProductCard slider />
-      <ProductCard slider bestseller />
-      <ProductCard slider />
-    </Slider>
-  </Wrapper>
+  <>
+    <Title>Nasze bestsellery</Title>
+    <Wrapper>
+      <Slider {...settings}>
+        <ProductCard slider bestseller image={image1} />
+        <ProductCard slider image={image2} />
+        <ProductCard slider bestseller image={image3} />
+        <ProductCard slider image={image4} />
+      </Slider>
+    </Wrapper>
+  </>
 );
 
 export default Carousel;
