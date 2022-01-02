@@ -6,17 +6,20 @@ export const Wrapper = styled.article`
       ? 'none'
       : `1px solid
      ${theme.colors.grey}`};
-  height: ${({ slider }) => (slider ? '546px' : '538px')};
-  width: ${({ slider }) => (slider ? '346px' : '360px')};
-  padding: ${({ slider }) => (slider ? '63px 40px' : '39px 0 38px 0')};
+  height: ${({ slider, news }) =>
+    news ? '600px' : slider ? '480px' : '538px'};
+  width: ${({ slider, news }) => (news ? '340px' : slider ? '346px' : '360px')};
+  padding: ${({ slider, news }) =>
+    news ? '0' : slider ? '63px 40px' : '39px 0 38px 0'};
   background: ${({ slider }) => (slider ? '#f2f2f2' : 'white')};
   border-radius: ${({ slider }) => (slider ? '20px' : '0')};
 `;
 
 export const ProductImage = styled.img`
   display: block;
-  width: ${({ slider }) => (slider ? '266px' : '360px')};
-  height: ${({ slider }) => (slider ? '291px' : '360px')};
+  width: ${({ slider, news }) => (news ? '340px' : slider ? '266px' : '360px')};
+  height: ${({ slider, news }) => (news ? 'auto' : slider ? '291px' : '360px')};
+  border-radius: ${({ news }) => (news ? '20px 20px 0 0' : '0')};
 `;
 
 export const BestsellerWrapper = styled.div`
@@ -31,7 +34,7 @@ export const BestsellerWrapper = styled.div`
 export const Bestseller = styled.p`
   font-size: 13px;
   text-align: center;
-  /* padding: 18px 0 10px; */
+  padding: 18px 0 10px;
   font-weight: 500;
   color: ${({ theme }) => theme.colors.orange};
 `;
@@ -45,5 +48,5 @@ export const ProductTitle = styled.p`
 `;
 
 export const ProductPrice = styled(ProductTitle)`
-  padding: 50px 0 0 0;
+  padding-top: ${({ news }) => (news ? '8px' : '20px')};
 `;
