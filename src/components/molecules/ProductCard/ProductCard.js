@@ -7,19 +7,18 @@ import {
   BestsellerWrapper,
 } from './ProductCard.style';
 
-const ProductCard = ({ slider, bestseller, image }) => (
-  <Wrapper slider={slider}>
-    <ProductImage
-      // src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/MWP22?wid=266&hei=291&fmt=png-alpha&.v=1591634795000"
-      src={image}
-      slider={slider}
-    />
-    <BestsellerWrapper>
-      {bestseller && <Bestseller>Bestseller</Bestseller>}
-    </BestsellerWrapper>
-    <ProductTitle>Koszula XYZ</ProductTitle>
-    <ProductPrice>1 234,00 zł</ProductPrice>
-  </Wrapper>
-);
+const ProductCard = ({ slider, product }) => {
+  return (
+    <Wrapper slider={slider} news={product.news}>
+      <ProductImage news={product.news} src={product.image} slider={slider} />
+      <BestsellerWrapper>
+        {product.bestseller && <Bestseller>Bestseller</Bestseller>}
+        {product.news && <Bestseller>Nowość</Bestseller>}
+      </BestsellerWrapper>
+      <ProductTitle>{product.name}</ProductTitle>
+      <ProductPrice news={product.news}>{product.price} zł</ProductPrice>
+    </Wrapper>
+  );
+};
 
 export default ProductCard;

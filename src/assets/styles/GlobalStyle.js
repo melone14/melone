@@ -13,6 +13,7 @@ html {
  
 body {
     font-family: 'Montserrat', sans-serif;
+    background: ${({ theme }) => theme.colors.smokedWhite};
     
     a, button {
         font-family: 'Montserrat', sans-serif;
