@@ -1,15 +1,20 @@
 import {
-  Wrapper,
+  // Wrapper,
   ProductImage,
   Bestseller,
   ProductTitle,
   ProductPrice,
   BestsellerWrapper,
+  ProductLink,
 } from './ProductCard.style';
 
 const ProductCard = ({ slider, product }) => {
   return (
-    <Wrapper slider={slider} news={product.news}>
+    <ProductLink
+      slider={slider}
+      news={product.news}
+      to={`/products/${product.gid}`}
+    >
       <ProductImage news={product.news} src={product.image} slider={slider} />
       <BestsellerWrapper>
         {product.bestseller && <Bestseller>Bestseller</Bestseller>}
@@ -17,7 +22,7 @@ const ProductCard = ({ slider, product }) => {
       </BestsellerWrapper>
       <ProductTitle>{product.name}</ProductTitle>
       <ProductPrice news={product.news}>{product.price} zł</ProductPrice>
-    </Wrapper>
+    </ProductLink>
   );
 };
 

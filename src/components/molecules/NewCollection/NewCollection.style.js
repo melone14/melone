@@ -10,12 +10,12 @@ export const Wrapper = styled.section`
   justify-content: space-around;
   align-items: center;
 
-  article:nth-child(odd) {
+  a:nth-child(odd) {
     position: relative;
     top: 50px;
   }
 
-  article:nth-child(2) {
+  a:nth-child(2) {
     position: relative;
     bottom: 50px;
   }
