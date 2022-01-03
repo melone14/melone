@@ -5,6 +5,7 @@ import Navigation from 'components/organisms/Navigation/Navigation';
 import MainTemplate from 'components/templates/MainTemplate/MainTemplate';
 import Home from 'views/Home';
 import { Routes, Route } from 'react-router-dom';
+import Footer from 'components/organisms/Footer/Footer';
 
 const Root = () => (
   <div>
@@ -19,6 +20,7 @@ const Root = () => (
           <Route path="/wyprzedaz" element={<h1>wyprzedaz</h1>} />
         </Routes>
       </MainTemplate>
+      <Footer />
     </ThemeProvider>
   </div>
 );
