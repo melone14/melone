@@ -67,7 +67,7 @@ export const SocialWrapper = styled.div`
   width: 100%;
   height: 40px;
   display: flex;
-  margin: 14px 0 10px 0;
+  margin: 14px 0 10px 20px;
 `;
 
 export const SocialIcon = styled.img`
