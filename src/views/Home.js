@@ -14,16 +14,6 @@ const Home = () => (
       <NewCollection />
       <SectionTitle center>Nasze bestsellery</SectionTitle>
       <Carousel />
-
-      <h1>Siema</h1>
-      <h1>Siema</h1>
-      <h1>Siema</h1>
-      <h1>Siema</h1>
-      <h1>Siema</h1>
-      <h1>Siema</h1>
-      <h1>Siema</h1>
-      <h1>Siema</h1>
-      <h1>Siema</h1>
     </MainTemplate>
   </>
 );
