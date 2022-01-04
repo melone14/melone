@@ -85,13 +85,25 @@ const Footer = () => {
           <h2>Inspektor Danych Osobowych</h2>
           <a href="mailto:iod@melone.pl">iod@melone.pl</a>
           <SocialWrapper>
-            <a href="https://www.facebook.com/" target="_blank">
+            <a
+              href="https://www.facebook.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <SocialIcon src={facebook} />
             </a>
-            <a href="https://www.youtube.com/" target="_blank">
+            <a
+              href="https://www.youtube.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <SocialIcon src={youtube} />
             </a>
-            <a href="https://www.instagram.com/" target="_blank">
+            <a
+              href="https://www.instagram.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <SocialIcon src={instagram} />
             </a>
           </SocialWrapper>
