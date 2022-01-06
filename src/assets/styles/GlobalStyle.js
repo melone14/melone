@@ -14,6 +14,7 @@ html {
 body {
     font-family: 'Montserrat', sans-serif;
     background: ${({ theme }) => theme.colors.smokedWhite};
+    color: ${({ theme }) => theme.colors.black};
     
     a, button {
         font-family: 'Montserrat', sans-serif;

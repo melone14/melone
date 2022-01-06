@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import background from 'assets/images/background.jpeg';
+import background from 'assets/images/bgImage.jpg';
 
 export const Image = styled.section`
   width: 100vw;

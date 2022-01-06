@@ -110,7 +110,7 @@ const Footer = () => {
         </ListWrapper>
       </InnerWrapper>
       <Logo src={logo} />
-      <Copyright>©2020-2022 Melone S.A. - All rights reserved</Copyright>
+      <Copyright>©2022-2024 Melone S.A. - All rights reserved</Copyright>
     </Wrapper>
   );
 };
