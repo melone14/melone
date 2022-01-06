@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export const Wrapper = styled.footer`
   background: white;
-  padding: 20px 0 40px 0;
+  padding: 15px 0 40px 0;
 `;
 
 export const InnerWrapper = styled.section`
@@ -12,12 +12,16 @@ export const InnerWrapper = styled.section`
   margin: 20px auto;
   display: flex;
   justify-content: space-around;
+  border-top: 1px solid ${({ theme }) => theme.colors.lightGrey};
+  padding-top: 30px;
 `;
 
 export const ListWrapper = styled.ul`
   display: block;
   list-style: none;
   width: 22%;
+  /* border: 1px solid green; */
+  /* text-align: center; */
 
   p {
     font-weight: 600;
