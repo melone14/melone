@@ -26,20 +26,20 @@ export const ListWrapper = styled.ul`
   p {
     font-weight: 600;
     padding-bottom: 12px;
-    font-size: 14px;
+    font-size: 16px;
     color: ${({ theme }) => theme.colors.black};
   }
 
   h2,
   a {
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 400;
     color: ${({ theme }) => theme.colors.black};
     text-decoration: none;
   }
 
   a:hover {
-    color: black;
+    font-weight: bold;
   }
 `;
 

@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import {
   BackgroundImage,
   ContentWrapper,
@@ -15,6 +17,12 @@ import {
 } from './Newsletter.style';
 
 const Newsletter = () => {
+  const [firstName, setFirstName] = useState('');
+  const [email, setEmail] = useState('');
+
+  const handleFirstNameChange = (e) => setFirstName(e.target.value);
+  const handleEmailChange = (e) => setEmail(e.target.value);
+
   return (
     <Wrapper>
       <BackgroundImage>
@@ -29,15 +37,28 @@ const Newsletter = () => {
           <InputWrapper>
             <InputInnerWrapper>
               <InputsWrapper>
-                <Input placeholder="Imię" bottomSpace />
-                <Input placeholder="Adres e-mail" />
+                <Input
+                  placeholder="Imię"
+                  bottomSpace
+                  value={firstName}
+                  onChange={handleFirstNameChange}
+                  id="firstName"
+                  name="firstName"
+                />
+                <Input
+                  placeholder="Adres e-mail"
+                  value={email}
+                  onChange={handleEmailChange}
+                  id="email"
+                  name="email"
+                />
                 <CheckboxsWrapper>
                   <Gender>
-                    <Checkbox type="checkbox" id="women" />
+                    <Checkbox type="checkbox" id="women" name="women" />
                     <Label for="women">Kobiety</Label>
                   </Gender>
                   <Gender>
-                    <Checkbox type="checkbox" id="men" />
+                    <Checkbox type="checkbox" id="men" name="men" />
                     <Label for="men">Mężczyźni</Label>
                   </Gender>
                 </CheckboxsWrapper>
