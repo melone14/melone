@@ -62,7 +62,7 @@ export const InputInnerWrapper = styled.div`
   align-items: center;
 `;
 
-export const InputsWrapper = styled.div`
+export const InputsWrapper = styled.form`
   width: 70%;
 `;
 
