@@ -6,6 +6,7 @@ import MainTemplate from 'components/templates/MainTemplate/MainTemplate';
 import Home from 'views/Home';
 import { Routes, Route } from 'react-router-dom';
 import Footer from 'components/organisms/Footer/Footer';
+import Products from './Products';
 
 const Root = () => (
   <div>
@@ -15,9 +16,9 @@ const Root = () => (
       <MainTemplate>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/kobiety" element={<h1>kobiety</h1>} />
-          <Route path="/mezczyzni" element={<h1>mezczyzni</h1>} />
-          <Route path="/wyprzedaz" element={<h1>wyprzedaz</h1>} />
+          <Route path="/kobiety" element={<Products />} />
+          <Route path="/mezczyzni" element={<Products />} />
+          <Route path="/wyprzedaz" element={<Products />} />
         </Routes>
       </MainTemplate>
       <Footer />
