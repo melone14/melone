@@ -23,6 +23,7 @@ const Newsletter = () => {
         <ContentWrapper>
           <TextWrapper>
             <h1>Newsletter</h1>
+
             <p>
               Zapisz się do newslettera <br />i odbierz 10% rabatu na pierwsze
               zamówienie!
@@ -34,18 +35,20 @@ const Newsletter = () => {
                 initialValues={{
                   firstName: '',
                   email: '',
-                  women: false,
-                  men: false,
+                  gender: [],
                 }}
                 validationSchema={Yup.object({
                   firstName: Yup.string()
-                    .max(15, 'Must be 15 characters or less')
+                    .min(
+                      2,
+                      'Twoje imię na pewno posiada więcej niż jedną literę'
+                    )
+                    .max(20, 'Twoje imię na pewno nie jest takie długie')
                     .required('Required'),
                   email: Yup.string()
-                    .email('Invalid email address')
+                    .email('Nieprawidłowy mail')
                     .required('Required'),
-                  women: Yup.boolean(),
-                  men: Yup.boolean(),
+                  gender: Yup.array().of(Yup.string()),
                 })}
                 onSubmit={(values, { setSubmitting }) => {
                   console.log('1');
@@ -57,47 +60,51 @@ const Newsletter = () => {
               >
                 {(formik) => (
                   <InputsWrapper onSubmit={formik.handleSubmit}>
-                    <Input
-                      placeholder="Imię"
-                      bottomSpace
-                      id="firstName"
-                      type="text"
-                      {...formik.getFieldProps('firstName')}
-                    />
-                    {formik.touched.firstName && formik.errors.firstName ? (
-                      <div>{formik.errors.firstName}</div>
-                    ) : null}
-                    <Input
-                      placeholder="Adres e-mail"
-                      id="email"
-                      type="email"
-                      {...formik.getFieldProps('email')}
-                    />
-                    {formik.touched.email && formik.errors.email ? (
-                      <div>{formik.errors.email}</div>
-                    ) : null}
-                    <CheckboxsWrapper>
-                      <Gender>
-                        <Checkbox
-                          type="checkbox"
-                          id="women"
-                          {...formik.getFieldProps('women')}
-                        />
-                        <Label htmlFor="women">Kobiety</Label>
-                      </Gender>
-                      <Gender>
-                        <Checkbox
-                          type="checkbox"
-                          id="men"
-                          {...formik.getFieldProps('men')}
-                        />
-                        <Label htmlFor="men">Mężczyźni</Label>
-                      </Gender>
-                    </CheckboxsWrapper>
+                    <div>
+                      <Input
+                        placeholder="Imię"
+                        bottomSpace
+                        id="firstName"
+                        type="text"
+                        {...formik.getFieldProps('firstName')}
+                      />
+                      {formik.touched.firstName && formik.errors.firstName ? (
+                        <div>{formik.errors.firstName}</div>
+                      ) : null}
+                      <Input
+                        placeholder="Adres e-mail"
+                        id="email"
+                        type="email"
+                        {...formik.getFieldProps('email')}
+                      />
+                      {formik.touched.email && formik.errors.email ? (
+                        <div>{formik.errors.email}</div>
+                      ) : null}
+                      <CheckboxsWrapper>
+                        <Gender>
+                          <Checkbox
+                            type="checkbox"
+                            id="women"
+                            name="gender"
+                            value="women"
+                          />
+                          <Label htmlFor="women">Kobiety</Label>
+                        </Gender>
+                        <Gender>
+                          <Checkbox
+                            type="checkbox"
+                            id="men"
+                            name="gender"
+                            value="men"
+                          />
+                          <Label htmlFor="men">Mężczyźni</Label>
+                        </Gender>
+                      </CheckboxsWrapper>
+                    </div>
+                    <SubmitButton type="submit">Wyślij</SubmitButton>
                   </InputsWrapper>
                 )}
               </Formik>
-              <SubmitButton>Wyślij</SubmitButton>
             </InputInnerWrapper>
           </InputWrapper>
         </ContentWrapper>
