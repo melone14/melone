@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Field } from 'formik';
 
 import bg2 from 'assets/images/newsletter2.jpg';
 
@@ -63,7 +64,9 @@ export const InputInnerWrapper = styled.div`
 `;
 
 export const InputsWrapper = styled.form`
-  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const Input = styled.input`
@@ -99,7 +102,7 @@ export const Label = styled.label`
   cursor: pointer;
 `;
 
-export const Checkbox = styled.input`
+export const Checkbox = styled(Field)`
   width: 15px;
   height: 15px;
   margin: 0 5px 0 5px;
@@ -108,17 +111,18 @@ export const Checkbox = styled.input`
 `;
 
 export const SubmitButton = styled.button`
-  width: 100px;
+  width: 150px;
   height: 65px;
   display: block;
   padding: 15px 0;
-  margin-left: 20px;
   border: 2px solid ${({ theme }) => theme.colors.black};
   border-radius: 10px;
   background: inherit;
   font-size: 16px;
   cursor: pointer;
   transition: 0.3s all;
+  position: relative;
+  right: 10px;
 
   &:hover {
     background: ${({ theme }) => theme.colors.black};
