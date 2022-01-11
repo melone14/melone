@@ -61,6 +61,7 @@ export const NavIconsWrapper = styled.ul`
   transition: all 0.5s ease-in-out;
   left: 1000px;
   position: relative;
+  font-size: 25px;
 
   &.active {
     opacity: 1;
