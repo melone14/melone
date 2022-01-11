@@ -14,6 +14,8 @@ import logo from 'assets/images/logo.png';
 import heart from 'assets/icons/heart.svg';
 import cart from 'assets/icons/cart.svg';
 import { Link } from 'react-router-dom';
+import * as FaIcons from 'react-icons/fa';
+import * as GrIcons from 'react-icons/gr';
 
 const Navigation = () => {
   const [navbarScroll, setNavbarScroll] = useState(false);
@@ -53,9 +55,9 @@ const Navigation = () => {
           <SearchBarInput placeholder="SZUKAJ" />
         </SearchBarWrapper>
         <NavIconsWrapper className={navbarScroll ? 'active' : null}>
-          <Icon icon={cart}></Icon>
-          <Icon icon={heart}></Icon>
-          <Icon icon={heart}></Icon>
+          <FaIcons.FaRegUser />
+          <GrIcons.GrBasket />
+          <FaIcons.FaRegHeart />
         </NavIconsWrapper>
       </NavigationWrapper>
     </header>
