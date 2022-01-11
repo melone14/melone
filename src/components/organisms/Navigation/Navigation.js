@@ -11,8 +11,6 @@ import {
 } from './Navigation.style';
 import { useEffect, useState } from 'react';
 import logo from 'assets/images/logo.png';
-import heart from 'assets/icons/heart.svg';
-import cart from 'assets/icons/cart.svg';
 import { Link } from 'react-router-dom';
 import * as FaIcons from 'react-icons/fa';
 import * as GrIcons from 'react-icons/gr';
