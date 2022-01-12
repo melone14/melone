@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { useState } from 'react';
 import ProductCard from 'components/molecules/ProductCard/ProductCard';
-// import { Routes, Route } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 import foto1 from 'assets/images/1.png';
 import foto2 from 'assets/images/2.png';
@@ -127,7 +127,7 @@ const categoriesData = [
       },
       {
         title: 'Kurtki przejściowe',
-        path: 'kurtki-przejściowe',
+        path: 'kurtki-przejsciowe',
       },
       {
         title: 'Kurtki skórzane',
@@ -200,7 +200,7 @@ const testProducts = [
     news: false,
     price: '1230,00',
     name: 'Płaszcz Amoloco',
-    gid: 12231,
+    gid: 1224331,
   },
   {
     bestseller: true,
@@ -208,7 +208,7 @@ const testProducts = [
     news: false,
     price: '860,00',
     name: 'Koszula Bolton Gacio',
-    gid: 154352,
+    gid: 15431152,
   },
   {
     bestseller: true,
@@ -216,7 +216,7 @@ const testProducts = [
     news: false,
     price: '480,00',
     name: 'Koszula Fortes Powder Pink',
-    gid: 1234532,
+    gid: 123443532,
   },
   {
     bestseller: true,
@@ -224,9 +224,47 @@ const testProducts = [
     news: false,
     price: '480,00',
     name: 'Koszula Fortes White Pearl',
-    gid: 107932,
+    gid: 107932432,
   },
 ];
+
+const MenuNavigationLink = styled(CategoryLink)`
+  display: inline-block;
+`;
+
+const MenuNavigation = () => {
+  const { pathname } = useLocation();
+  const url = pathname.split('/');
+
+  return (
+    <>
+      <MenuNavigationLink to="/">Strona główna</MenuNavigationLink>
+      {' / '}
+      <MenuNavigationLink to={`/${url[1]}`}>{`${url[1]}`}</MenuNavigationLink>
+      {url.length > 2 ? (
+        <>
+          {' / '}{' '}
+          <MenuNavigationLink
+            to={`/${url[1]}/${url[2]}`}
+          >{`${url[2]}`}</MenuNavigationLink>{' '}
+        </>
+      ) : null}
+    </>
+  );
+};
+
+const DisplayProduct = () => {
+  const { pathname } = useLocation();
+
+  return (
+    <ProductsWrapper>
+      {console.log(pathname)}
+      {testProducts.map((product) => (
+        <ProductCard slider product={product} key={product.gid} />
+      ))}
+    </ProductsWrapper>
+  );
+};
 
 const Products = () => {
   const [subnav, setSubnav] = useState(false);
@@ -235,9 +273,10 @@ const Products = () => {
 
   return (
     <SomeTemplate>
-      <Text style={{ paddingLeft: '30px' }}>
+      {/* <Text style={{ paddingLeft: '30px' }}>
         Strona główna > Mężczyźni > Koszule
-      </Text>
+      </Text> */}
+      <MenuNavigation />
       <Wrapper>
         <FiltersWrapper>
           <Text>Kategorie</Text>
@@ -268,11 +307,7 @@ const Products = () => {
           <Text>Rozmiar</Text>
         </FiltersWrapper>
 
-        <ProductsWrapper>
-          {testProducts.map((product) => (
-            <ProductCard slider product={product} key={product.gid} />
-          ))}
-        </ProductsWrapper>
+        <DisplayProduct />
       </Wrapper>
     </SomeTemplate>
   );

@@ -16,8 +16,8 @@ const Root = () => (
       <MainTemplate>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/kobiety" element={<Products />} />
-          <Route path="/mezczyzni" element={<Products />} />
+          <Route path="/kobiety/*" element={<Products />} />
+          <Route path="/mezczyzni/*" element={<Products />} />
           <Route path="/wyprzedaz" element={<Products />} />
         </Routes>
       </MainTemplate>
