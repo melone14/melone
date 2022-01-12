@@ -12,7 +12,7 @@ import { useEffect, useState } from 'react';
 import logo from 'assets/images/logo.png';
 import { Link, useLocation } from 'react-router-dom';
 import * as FaIcons from 'react-icons/fa';
-import * as GrIcons from 'react-icons/gr';
+import * as HiIcons from 'react-icons/hi';
 
 const Navigation = () => {
   const [navbarScroll, setNavbarScroll] = useState(false);
@@ -85,9 +85,9 @@ const Navigation = () => {
               : null
           }
         >
-          <FaIcons.FaRegUser />
-          <GrIcons.GrBasket />
+          <HiIcons.HiOutlineShoppingBag />
           <FaIcons.FaRegHeart />
+          <FaIcons.FaRegUser />
         </NavIconsWrapper>
       </NavigationWrapper>
     </header>

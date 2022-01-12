@@ -61,11 +61,22 @@ export const NavIconsWrapper = styled.ul`
   transition: all 0.5s ease-in-out;
   left: 1000px;
   position: relative;
-  font-size: 25px;
+  font-size: 30px;
+  padding-left: 20px;
+  color: ${({ theme }) => theme.colors.black};
 
   &.active {
     opacity: 1;
     left: 0;
+  }
+
+  svg {
+    margin-right: 5px;
+    cursor: pointer;
+  }
+
+  svg:hover {
+    color: ${({ theme }) => theme.colors.grey};
   }
 `;
 

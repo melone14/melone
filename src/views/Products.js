@@ -228,6 +228,13 @@ const testProducts = [
   },
 ];
 
+const MenuNavigationWrapper = styled.section`
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-left: 20px;
+`;
+
 const MenuNavigationLink = styled(CategoryLink)`
   display: inline-block;
 `;
@@ -237,10 +244,16 @@ const MenuNavigation = () => {
   const url = pathname.split('/');
 
   return (
-    <>
+    <MenuNavigationWrapper>
       <MenuNavigationLink to="/">Strona główna</MenuNavigationLink>
       {' / '}
-      <MenuNavigationLink to={`/${url[1]}`}>{`${url[1]}`}</MenuNavigationLink>
+      <MenuNavigationLink to={`/${url[1]}`}>
+        {url[1] === 'mezczyzni'
+          ? 'mężczyźni'
+          : url[1] === 'wyprzedaz'
+          ? 'wyprzedaż'
+          : `${url[1]}`}
+      </MenuNavigationLink>
       {url.length > 2 ? (
         <>
           {' / '}{' '}
@@ -249,7 +262,7 @@ const MenuNavigation = () => {
           >{`${url[2]}`}</MenuNavigationLink>{' '}
         </>
       ) : null}
-    </>
+    </MenuNavigationWrapper>
   );
 };
 
