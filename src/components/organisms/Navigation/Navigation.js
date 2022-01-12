@@ -75,20 +75,20 @@ const Navigation = () => {
           }
         >
           <SearchBarInput placeholder="SZUKAJ" />
+          <NavIconsWrapper
+            className={
+              navbarScroll
+                ? 'active'
+                : null || pathname.length > 2
+                ? 'active'
+                : null
+            }
+          >
+            <HiIcons.HiOutlineShoppingBag />
+            <FaIcons.FaRegHeart />
+            <FaIcons.FaRegUser />
+          </NavIconsWrapper>
         </SearchBarWrapper>
-        <NavIconsWrapper
-          className={
-            navbarScroll
-              ? 'active'
-              : null || pathname.length > 2
-              ? 'active'
-              : null
-          }
-        >
-          <HiIcons.HiOutlineShoppingBag />
-          <FaIcons.FaRegHeart />
-          <FaIcons.FaRegUser />
-        </NavIconsWrapper>
       </NavigationWrapper>
     </header>
   );

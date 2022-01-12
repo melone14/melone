@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
+import * as FaIcons from 'react-icons/fa';
 
 export const NavigationWrapper = styled.nav`
   background: rgba(255, 255, 255, 0);
@@ -9,7 +10,7 @@ export const NavigationWrapper = styled.nav`
   border-bottom: 0px solid white;
   box-shadow: rgb(221, 221, 221) 0px -1px inset;
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 2fr;
   font-size: 17px;
   position: fixed;
   top: 0;
@@ -88,11 +89,11 @@ export const SearchBarWrapper = styled.div`
   opacity: 0;
   transition: all 0.5s ease-in-out;
   position: relative;
-  bottom: 200px;
+  left: 1000px;
 
   &.active {
     opacity: 1;
-    bottom: 0;
+    left: 0;
   }
 `;
 
@@ -104,7 +105,6 @@ export const SearchBarInput = styled.input`
   background: inherit;
   outline: none;
   padding-bottom: 2px;
-  margin-left: 90px;
   font-family: 'Montserrat', sans-serif;
 
   &::placeholder {
