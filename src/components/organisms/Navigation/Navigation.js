@@ -4,7 +4,6 @@ import {
   NavigationWrapper,
   NavList,
   NavListItem,
-  Icon,
   SearchBarInput,
   SearchBarWrapper,
   StyledLink,

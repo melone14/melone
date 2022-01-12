@@ -69,14 +69,6 @@ export const NavIconsWrapper = styled.ul`
   }
 `;
 
-export const Icon = styled.div`
-  width: 30px;
-  height: 30px;
-  margin-left: 12px;
-  cursor: pointer;
-  background-image: ${({ icon }) => (icon ? `url(${icon})` : '')};
-`;
-
 export const SearchBarWrapper = styled.div`
   /* border: 1px solid #383838; */
   display: flex;
