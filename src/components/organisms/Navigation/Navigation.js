@@ -10,12 +10,13 @@ import {
 } from './Navigation.style';
 import { useEffect, useState } from 'react';
 import logo from 'assets/images/logo.png';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import * as FaIcons from 'react-icons/fa';
 import * as GrIcons from 'react-icons/gr';
 
 const Navigation = () => {
   const [navbarScroll, setNavbarScroll] = useState(false);
+  const { pathname } = useLocation();
 
   const handleNavbarScroll = () => {
     if (window.scrollY >= 2) {
@@ -33,8 +34,24 @@ const Navigation = () => {
 
   return (
     <header>
-      <NavigationWrapper className={navbarScroll ? 'active' : null}>
-        <NavList className={navbarScroll ? 'active' : null}>
+      <NavigationWrapper
+        className={
+          navbarScroll
+            ? 'active'
+            : null || pathname.length > 2
+            ? 'active'
+            : null
+        }
+      >
+        <NavList
+          className={
+            navbarScroll
+              ? 'active'
+              : null || pathname.length > 2
+              ? 'active'
+              : null
+          }
+        >
           <NavListItem>
             <StyledLink to="/kobiety">KOBIETY</StyledLink>
           </NavListItem>
@@ -48,10 +65,26 @@ const Navigation = () => {
         <Link to="/">
           <Logo src={logo} />
         </Link>
-        <SearchBarWrapper className={navbarScroll ? 'active' : null}>
+        <SearchBarWrapper
+          className={
+            navbarScroll
+              ? 'active'
+              : null || pathname.length > 2
+              ? 'active'
+              : null
+          }
+        >
           <SearchBarInput placeholder="SZUKAJ" />
         </SearchBarWrapper>
-        <NavIconsWrapper className={navbarScroll ? 'active' : null}>
+        <NavIconsWrapper
+          className={
+            navbarScroll
+              ? 'active'
+              : null || pathname.length > 2
+              ? 'active'
+              : null
+          }
+        >
           <FaIcons.FaRegUser />
           <GrIcons.GrBasket />
           <FaIcons.FaRegHeart />
