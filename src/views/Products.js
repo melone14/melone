@@ -53,12 +53,17 @@ const CateogriesWrapper = styled.ul`
 const CategoryLink = styled(Link)`
   color: ${({ theme }) => theme.colors.black};
   text-decoration: none;
-  margin: 10px 0;
+  margin: 8px 0 4px 0;
   display: flex;
   /* border: 1px solid green; */
-  height: 30px;
+  height: 22px;
   justify-content: flex-start;
   align-items: center;
+  transition: all 0.2s;
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.grey};
+  }
 
   span {
     padding-left: 5px;
@@ -67,11 +72,16 @@ const CategoryLink = styled(Link)`
 `;
 
 const SubCategoryLink = styled(Link)`
-  color: red;
-  font-size: 12px;
+  color: ${({ theme }) => theme.colors.black};
+  font-size: 13px;
   text-decoration: none;
-  padding-left: 20px;
+  padding-left: 27px;
   display: block;
+  transition: all 0.2s;
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.grey};
+  }
 `;
 
 const categoriesData = [

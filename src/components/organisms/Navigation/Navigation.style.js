@@ -74,6 +74,7 @@ export const NavIconsWrapper = styled.ul`
   svg {
     margin-right: 5px;
     cursor: pointer;
+    transition: all 0.3s;
   }
 
   svg:hover {
