@@ -12,19 +12,19 @@ const CategoryImages = () => {
   return (
     <Wrapper>
       <ImageWrapper>
-        <StyledLink to="/kurtki-plaszcze">
+        <StyledLink to="/kobiety/kurtki-plaszcze">
           <Image src={kurtki} />
           <p>Kurtki i płaszcze</p>
         </StyledLink>
       </ImageWrapper>
       <ImageWrapper>
-        <StyledLink to="/sukienki-spodnice">
+        <StyledLink to="/kobiety/sukienki-spodnice">
           <Image src={sukienki} />
           <p>Sukienki i spódnice</p>
         </StyledLink>
       </ImageWrapper>
       <ImageWrapper>
-        <StyledLink to="/dresy">
+        <StyledLink to="/kobiety/dresy">
           <Image src={dresy} />
           <p>Dresy</p>
         </StyledLink>
