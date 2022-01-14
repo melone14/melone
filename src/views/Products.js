@@ -12,10 +12,6 @@ import { Link } from 'react-router-dom';
 import * as RiIcons from 'react-icons/ri';
 import * as GiIcons from 'react-icons/gi';
 
-const SomeTemplate = styled.section`
-  padding-top: 100px;
-`;
-
 const Wrapper = styled.section`
   min-height: 1000px;
   display: grid;
@@ -241,7 +237,7 @@ const testProducts = [
 const MenuNavigationWrapper = styled.section`
   width: 100%;
   max-width: 1400px;
-  margin: 0 auto;
+  margin: 10px auto;
   padding-left: 20px;
 `;
 
@@ -277,11 +273,8 @@ const MenuNavigation = () => {
 };
 
 const DisplayProduct = () => {
-  const { pathname } = useLocation();
-
   return (
     <ProductsWrapper>
-      {console.log(pathname)}
       {testProducts.map((product) => (
         <ProductCard slider product={product} key={product.gid} />
       ))}
@@ -295,10 +288,7 @@ const Products = () => {
   const handleCateogryClick = () => setSubnav(!subnav);
 
   return (
-    <SomeTemplate>
-      {/* <Text style={{ paddingLeft: '30px' }}>
-        Strona główna > Mężczyźni > Koszule
-      </Text> */}
+    <>
       <MenuNavigation />
       <Wrapper>
         <FiltersWrapper>
@@ -332,7 +322,7 @@ const Products = () => {
 
         <DisplayProduct />
       </Wrapper>
-    </SomeTemplate>
+    </>
   );
 };
 
