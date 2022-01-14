@@ -14,7 +14,7 @@ const testProducts = [
   {
     bestseller: true,
     image: foto1,
-    news: false,
+    news: '',
     price: '1230,00',
     name: 'Płaszcz Amoloco',
     gid: 12231,
@@ -22,7 +22,7 @@ const testProducts = [
   {
     bestseller: true,
     image: foto2,
-    news: false,
+    news: '',
     price: '860,00',
     name: 'Koszula Bolton Gacio',
     gid: 154352,
@@ -30,7 +30,7 @@ const testProducts = [
   {
     bestseller: true,
     image: foto3,
-    news: false,
+    news: '',
     price: '480,00',
     name: 'Koszula Fortes Powder Pink',
     gid: 1234532,
@@ -38,7 +38,7 @@ const testProducts = [
   {
     bestseller: true,
     image: foto4,
-    news: false,
+    news: '',
     price: '480,00',
     name: 'Koszula Fortes White Pearl',
     gid: 107932,
@@ -93,7 +93,7 @@ const Carousel = () => {
       <Wrapper>
         <Slider {...settings}>
           {testProducts.map((product) => (
-            <ProductCard slider product={product} key={product.gid} />
+            <ProductCard slider="yes" product={product} key={product.gid} />
           ))}
         </Slider>
       </Wrapper>

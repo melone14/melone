@@ -11,8 +11,8 @@ import {
 const ProductCard = ({ slider, product }) => {
   return (
     <ProductLink
-      slider="yes"
-      // news={product.news}
+      slider={slider}
+      news={product.news}
       to={`/products/${product.gid}`}
     >
       <ProductImage news={product.news} src={product.image} slider={slider} />

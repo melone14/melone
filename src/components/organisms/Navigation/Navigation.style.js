@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
-import * as FaIcons from 'react-icons/fa';
 
 export const NavigationWrapper = styled.nav`
   background: rgba(255, 255, 255, 0);
