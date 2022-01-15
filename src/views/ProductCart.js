@@ -1,10 +1,7 @@
 import styled from 'styled-components';
 import { useState } from 'react';
 
-// import foto1 from 'assets/images/1.png';
-import foto2 from 'assets/images/2.png';
 import foto6 from 'assets/images/6.jpeg';
-import foto4 from 'assets/images/4.png';
 import foto7 from 'assets/images/7.jpeg';
 import foto8 from 'assets/images/8.jpeg';
 import foto9 from 'assets/images/9.jpeg';
