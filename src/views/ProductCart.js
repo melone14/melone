@@ -1,12 +1,19 @@
 import styled from 'styled-components';
 import { useState } from 'react';
 
-import foto1 from 'assets/images/1.png';
+// import foto1 from 'assets/images/1.png';
 import foto2 from 'assets/images/2.png';
-import foto3 from 'assets/images/3.png';
+import foto6 from 'assets/images/6.jpeg';
 import foto4 from 'assets/images/4.png';
+import foto7 from 'assets/images/7.jpeg';
+import foto8 from 'assets/images/8.jpeg';
+import foto9 from 'assets/images/9.jpeg';
 import foto5 from 'assets/images/sukienki.jpg';
 import * as FaIcons from 'react-icons/fa';
+import Accordion from 'components/molecules/Accordion/Accordion';
+import ShoppingInfo from 'components/molecules/ShoppingInfo/ShoppingInfo';
+import SectionTitle from 'components/atoms/SectionTitle/SectionTitle';
+import Carousel from 'components/organisms/Carousel/Carousel';
 
 const Wrapper = styled.section`
   padding: 30px 0;
@@ -28,17 +35,25 @@ const ImageGalery = styled.div`
   height: 636px;
 `;
 
-const MainImage = styled.img`
+// const MainImage = styled.img`
+//   width: 80%;
+//   height: auto;
+//   max-height: 636px;
+//   /* border: 1px solid green; */
+// `;
+
+const MainImage = styled.div`
   width: 80%;
-  height: auto;
-  max-height: 636px;
-  /* border: 1px solid green; */
+  height: 636px;
+  background: ${({ mainImage }) =>
+    `url(${mainImage}) center/cover no-repeat border-box`};
 `;
 
 const SmallImagesWrapper = styled.div`
   width: 20%;
-  height: 620px;
+  height: 636px;
   /* border: 1px solid green; */
+  background: white;
   margin: auto 0 auto 0;
   display: flex;
   flex-direction: column;
@@ -46,13 +61,15 @@ const SmallImagesWrapper = styled.div`
   justify-content: space-around;
 `;
 
-const SmallImage = styled.img`
+const SmallImage = styled.div`
   width: 95%;
-  height: auto;
+  height: 115px;
   display: block;
-  background-color: ${({ theme }) => theme.colors.lightGrey};
+  background: ${({ img, theme }) =>
+    `${theme.colors.lightGrey} url(${img}) center/contain no-repeat border-box`};
   cursor: pointer;
   border: 2px solid transparent;
+  border-radius: 10px;
 
   &:hover {
     border-color: ${({ theme }) => theme.colors.black};
@@ -154,52 +171,85 @@ const WishListBtn = styled.div`
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  transition: all 0.3s;
+
+  &:hover {
+    background: ${({ theme }) => theme.colors.grey};
+    filter: brightness(1.4);
+  }
 `;
 
 const ProductCart = () => {
+  const activeImg = foto5;
+  const images = [foto9, foto7, foto8, foto6, foto5];
+
   const [heart, setHeart] = useState(false);
+  const [activeImage, setActiveImage] = useState(activeImg);
 
   const handleHeartClick = () => setHeart(!heart);
 
+  const handleImageChange = (img) => setActiveImage(img);
+
   return (
-    <Wrapper>
-      <ImageGalery>
-        <SmallImagesWrapper>
-          <SmallImage src={foto2} />
-          <SmallImage src={foto3} />
-          <SmallImage src={foto4} />
-          <SmallImage src={foto3} />
-          <SmallImage src={foto3} />
-        </SmallImagesWrapper>
-        <MainImage src={foto5} />
-      </ImageGalery>
-      <InfoWrapper>
-        <ProductTitle>SUKIENKA POLLY BROWN PANTERA</ProductTitle>
-        <ProductPrice>
-          <span>785,00 zł</span>450,00 zł
-        </ProductPrice>
-        <ProductSizeWrapper>
-          <h1>Wybierz rozmiar:</h1>
-        </ProductSizeWrapper>
-        <SizesWrapper>
-          <Size>S</Size>
-          <Size>M</Size>
-          <Size>L</Size>
-          <Size>XL</Size>
-          <Size>XXL</Size>
-        </SizesWrapper>
-        <ButtonsWrapper>
-          <AddToCartBtn type="submit" value="Dodaj do koszyka" />
-          <WishListBtn onClick={handleHeartClick}>
-            {heart ? (
-              <FaIcons.FaHeart style={{ color: '#ce3535' }} />
-            ) : (
-              <FaIcons.FaRegHeart />
-            )}
-          </WishListBtn>
-        </ButtonsWrapper>
-      </InfoWrapper>
-    </Wrapper>
+    <>
+      <Wrapper>
+        <ImageGalery>
+          <SmallImagesWrapper>
+            <SmallImage
+              img={images[0]}
+              onClick={() => handleImageChange(images[0])}
+            />
+            <SmallImage
+              img={images[1]}
+              onClick={() => handleImageChange(images[1])}
+            />
+            <SmallImage
+              img={images[2]}
+              onClick={() => handleImageChange(images[2])}
+            />
+            <SmallImage
+              img={images[3]}
+              onClick={() => handleImageChange(images[3])}
+            />
+            <SmallImage
+              img={images[4]}
+              onClick={() => handleImageChange(images[4])}
+            />
+          </SmallImagesWrapper>
+          <MainImage mainImage={activeImage} />
+        </ImageGalery>
+        <InfoWrapper>
+          <ProductTitle>SUKIENKA POLLY BROWN PANTERA</ProductTitle>
+          <ProductPrice>
+            <span>785,00 zł</span>450,00 zł
+          </ProductPrice>
+          <ProductSizeWrapper>
+            <h1>Wybierz rozmiar:</h1>
+          </ProductSizeWrapper>
+          <SizesWrapper>
+            <Size>S</Size>
+            <Size>M</Size>
+            <Size>L</Size>
+            <Size>XL</Size>
+            <Size>XXL</Size>
+          </SizesWrapper>
+          <ButtonsWrapper>
+            <AddToCartBtn type="submit" value="Dodaj do koszyka" />
+            <WishListBtn onClick={handleHeartClick}>
+              {heart ? (
+                <FaIcons.FaHeart style={{ color: '#ce3535' }} />
+              ) : (
+                <FaIcons.FaRegHeart />
+              )}
+            </WishListBtn>
+          </ButtonsWrapper>
+          <Accordion />
+        </InfoWrapper>
+      </Wrapper>
+      <ShoppingInfo />
+      <SectionTitle center>Nasze bestsellery</SectionTitle>
+      <Carousel />
+    </>
   );
 };
 
