@@ -1,18 +1,25 @@
 import styled from 'styled-components';
+import * as GoIcons from 'react-icons/go';
+import * as BsIcons from 'react-icons/bs';
+import deliveryIcon from 'assets/icons/deliveryIcon.svg';
+import lockedIcon from 'assets/icons/lockedIcon.svg';
+import returnIcon from 'assets/icons/returnIcon.svg';
 
 const Wrapper = styled.section`
   height: 250px;
   max-width: 1250px;
-  margin: 0 auto;
-  border: 1px solid green;
+  margin: 10px auto;
+
+  /* border: 1px solid green; */
   display: flex;
   justify-content: space-between;
+  align-items: center;
 `;
 
 const InfoWrapper = styled.div`
   width: 30%;
   max-width: 400px;
-  height: 200px;
+  min-height: 180px;
   border: 1px solid ${({ theme }) => theme.colors.grey};
   display: flex;
   flex-direction: column;
@@ -33,6 +40,20 @@ const InfoTitle = styled.h1`
   text-transform: uppercase;
   font-size: 14px;
   font-weight: 400;
+  display: flex;
+  align-items: center;
+
+  svg {
+    font-size: 28px;
+    margin-right: 7px;
+  }
+`;
+
+const StyledIcon = styled.div`
+  margin-right: 9px;
+  width: 28px;
+  height: ${({ h }) => (h ? h : '28px')};
+  background: url(${({ icon }) => icon}) center/cover no-repeat border-box;
 `;
 
 const InfoContent = styled.p`
@@ -47,7 +68,9 @@ const ShoppingInfo = () => {
     <Wrapper>
       <InfoWrapper>
         <Header>
-          <InfoTitle>Bezpieczna wysyłka</InfoTitle>
+          <InfoTitle>
+            <StyledIcon h="29px" icon={deliveryIcon} /> Bezpieczna wysyłka
+          </InfoTitle>
         </Header>
         <InfoContent>
           Współpracujemy z najlepszymi firmami kurierskimi na całym świecie.
@@ -57,7 +80,10 @@ const ShoppingInfo = () => {
       </InfoWrapper>
       <InfoWrapper>
         <Header>
-          <InfoTitle>14 dni na zwrot</InfoTitle>
+          <InfoTitle>
+            <StyledIcon icon={returnIcon} />
+            14 dni na zwrot
+          </InfoTitle>
         </Header>
         <InfoContent>
           Skorzystaj z formularza zwrotu dołączonego do przesyłki. Pamiętaj, że
@@ -67,7 +93,11 @@ const ShoppingInfo = () => {
       </InfoWrapper>
       <InfoWrapper>
         <Header>
-          <InfoTitle>bezpieczna płatność</InfoTitle>
+          <InfoTitle>
+            {/* <StyledIcon icon={lockedIcon} /> */}
+            <BsIcons.BsLock />
+            bezpieczna płatność
+          </InfoTitle>
         </Header>
         <InfoContent>
           Monitorujemy wszystkie transakcje, korzystamy z technologii
