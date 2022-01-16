@@ -13,7 +13,7 @@ import SectionTitle from 'components/atoms/SectionTitle/SectionTitle';
 import Carousel from 'components/organisms/Carousel/Carousel';
 
 const Wrapper = styled.section`
-  padding: 30px 0;
+  padding: 30px 0 0;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
@@ -50,7 +50,7 @@ const SmallImagesWrapper = styled.div`
   width: 20%;
   height: 636px;
   /* border: 1px solid green; */
-  background: white;
+  /* background: white; */
   margin: auto 0 auto 0;
   display: flex;
   flex-direction: column;
@@ -176,6 +176,20 @@ const WishListBtn = styled.div`
   }
 `;
 
+const Description = styled.p`
+  font-size: 16px;
+  display: block;
+  max-width: 1200px;
+  padding: 0 310px 30px 0;
+  margin: 0 auto;
+  /* border: 1px solid black; */
+
+  h1 {
+    font-size: 17px;
+    padding-bottom: 7px;
+  }
+`;
+
 const ProductCart = () => {
   const activeImg = foto5;
   const images = [foto9, foto7, foto8, foto6, foto5];
@@ -243,6 +257,16 @@ const ProductCart = () => {
           <Accordion />
         </InfoWrapper>
       </Wrapper>
+      <Description>
+        <h1>Opis produktu:</h1>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem
+        voluptates sint error consectetur eos harum vel quo veniam vero
+        consequuntur laudantium nisi blanditiis facere at qui, necessitatibus
+        debitis earum eligendi.Lorem ipsum dolor sit amet consectetur,
+        adipisicing elit. Quidem voluptates sint error consectetur eos harum vel
+        quo veniam vero consequuntur laudantium nisi blanditiis facere at qui,
+        necessitatibus debitis earum eligendi.
+      </Description>
       <ShoppingInfo />
       <SectionTitle center>Nasze bestsellery</SectionTitle>
       <Carousel />

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import * as FaIcons from 'react-icons/fa';
+import * as BiIcons from 'react-icons/bi';
 import { useState } from 'react/cjs/react.development';
 
 const Wrapper = styled.div`
@@ -35,6 +35,8 @@ const Content = styled.div`
   overflow: hidden;
   line-height: 1.4;
   font-size: 14px;
+  max-height: 119px;
+  overflow-y: scroll;
 
   &.visibleAccordion {
     display: block;
@@ -66,9 +68,9 @@ const Accordion = () => {
         <Title onClick={() => handleClickAccordion('materials')}>
           Materiał i wskazówki pielęgnacyjne
           {activeAccordion === 'materials' ? (
-            <FaIcons.FaAngleUp />
+            <BiIcons.BiChevronUp />
           ) : (
-            <FaIcons.FaAngleDown />
+            <BiIcons.BiChevronDown />
           )}
         </Title>
         <Content
@@ -94,9 +96,9 @@ const Accordion = () => {
         <Title onClick={() => handleClickAccordion('size')}>
           Rozmiar i krój
           {activeAccordion === 'size' ? (
-            <FaIcons.FaAngleUp />
+            <BiIcons.BiChevronUp />
           ) : (
-            <FaIcons.FaAngleDown />
+            <BiIcons.BiChevronDown />
           )}
         </Title>
         <Content
@@ -107,16 +109,20 @@ const Accordion = () => {
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam
           dignissimos deleniti officia deserunt voluptatem accusamus velit
           impedit ex, corrupti sed. Distinctio perferendis harum impedit
-          expedita illum voluptates nemo inventore aliquam?
+          expedita illum voluptates nemo inventore aliquam? Lorem ipsum, dolor
+          sit amet consectetur adipisicing elit. Aperiam dignissimos deleniti
+          officia deserunt voluptatem accusamus velit impedit ex, corrupti sed.
+          Distinctio perferendis harum impedit expedita illum voluptates nemo
+          inventore aliquam?
         </Content>
       </TopicWrapper>
       <TopicWrapper>
         <Title onClick={() => handleClickAccordion('infos')}>
           Informacje dodatkowe
           {activeAccordion === 'infos' ? (
-            <FaIcons.FaAngleUp />
+            <BiIcons.BiChevronUp />
           ) : (
-            <FaIcons.FaAngleDown />
+            <BiIcons.BiChevronDown />
           )}
         </Title>
         <Content

@@ -4,7 +4,7 @@ export const Title = styled.h1`
   font-size: 30px;
   font-weight: 500;
   display: ${({ center }) => (center ? 'inline-block' : 'block')};
-  margin: 30px auto;
+  margin: 20px auto 30px;
   max-width: 1400px;
   position: relative;
   left: 50%;
