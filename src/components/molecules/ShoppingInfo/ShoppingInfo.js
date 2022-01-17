@@ -21,9 +21,11 @@ const InfoWrapper = styled.div`
   max-width: 400px;
   min-height: 180px;
   border: 1px solid ${({ theme }) => theme.colors.grey};
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 `;
 
 const Header = styled.div`
@@ -61,6 +63,8 @@ const InfoContent = styled.p`
   padding: 20px 45px;
   line-height: 1.5;
   text-align: center;
+  min-height: 114px;
+  /* border: 1px solid red; */
 `;
 
 const ShoppingInfo = () => {

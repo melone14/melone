@@ -8,6 +8,7 @@ import { Routes, Route } from 'react-router-dom';
 import Footer from 'components/organisms/Footer/Footer';
 import Products from './Products';
 import ProductCart from './ProductCart';
+import Login from './Login';
 
 const Root = () => (
   <div>
@@ -21,6 +22,7 @@ const Root = () => (
           <Route path="/mezczyzni/*" element={<Products />} />
           <Route path="/wyprzedaz" element={<Products />} />
           <Route path="/products/:id" element={<ProductCart />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
       </MainTemplate>
       <Footer />
