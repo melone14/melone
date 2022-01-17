@@ -13,6 +13,16 @@ import logo from 'assets/images/logo.png';
 import { Link, useLocation } from 'react-router-dom';
 import * as FaIcons from 'react-icons/fa';
 import * as HiIcons from 'react-icons/hi';
+import styled from 'styled-components';
+
+const Basket = styled.div`
+  position: absolute;
+  top: 30px;
+  right: 0;
+  width: 300px;
+  height: 200px;
+  border: 1px solid red;
+`;
 
 const Navigation = () => {
   const [navbarScroll, setNavbarScroll] = useState(false);
