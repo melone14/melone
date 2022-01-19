@@ -27,6 +27,11 @@ const Title = styled.div`
   svg {
     font-size: 17px;
     color: ${({ theme }) => theme.colors.black};
+    transition: all 0.7s;
+  }
+
+  svg.activeAccordion {
+    transform: rotate(-180deg);
   }
 `;
 
@@ -36,7 +41,7 @@ const Content = styled.div`
   line-height: 1.4;
   font-size: 14px;
   max-height: 119px;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
 
   &.visibleAccordion {
     display: block;
@@ -70,7 +75,7 @@ const Accordion = () => {
           {activeAccordion === 'materials' ? (
             <BiIcons.BiChevronUp />
           ) : (
-            <BiIcons.BiChevronDown />
+            <BiIcons.BiChevronUp className="activeAccordion" />
           )}
         </Title>
         <Content
@@ -98,13 +103,14 @@ const Accordion = () => {
           {activeAccordion === 'size' ? (
             <BiIcons.BiChevronUp />
           ) : (
-            <BiIcons.BiChevronDown />
+            <BiIcons.BiChevronUp className="activeAccordion" />
           )}
         </Title>
         <Content
           className={
             activeAccordion === 'size' ? 'visibleAccordion' : 'hiddenAccordion'
           }
+          style={{ overflowY: 'scroll' }}
         >
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam
           dignissimos deleniti officia deserunt voluptatem accusamus velit
@@ -122,7 +128,7 @@ const Accordion = () => {
           {activeAccordion === 'infos' ? (
             <BiIcons.BiChevronUp />
           ) : (
-            <BiIcons.BiChevronDown />
+            <BiIcons.BiChevronUp className="activeAccordion" />
           )}
         </Title>
         <Content

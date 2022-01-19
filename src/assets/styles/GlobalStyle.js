@@ -20,4 +20,27 @@ body {
         font-family: 'Montserrat', sans-serif;
     }
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  padding-right: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.3); 
+border-radius: 20px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.6); 
+  border-radius: 20px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
 `;
