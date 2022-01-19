@@ -15,6 +15,10 @@ import * as FaIcons from 'react-icons/fa';
 import * as HiIcons from 'react-icons/hi';
 import styled from 'styled-components';
 
+import heart from 'assets/icons/heart.svg';
+import user from 'assets/icons/user.svg';
+import cart from 'assets/icons/cart.svg';
+
 const Basket = styled.div`
   position: absolute;
   top: 30px;
@@ -23,6 +27,23 @@ const Basket = styled.div`
   height: 200px;
   border: 1px solid red;
 `;
+
+const Icon = styled.div`
+  width: 30px;
+  height: 30px;
+  /* border: 1px solid black; */
+
+  background: url(${({ icon }) => (icon ? icon : '')}) center/cover no-repeat
+    border-box;
+
+  svg {
+    fill: ${({ theme }) => theme.colors.black};
+  }
+`;
+
+// const StyledLink = styled(Link)`
+//   color: ${({ theme }) => theme.colors.black};
+// `;
 
 const Navigation = () => {
   const [navbarScroll, setNavbarScroll] = useState(false);
@@ -94,9 +115,18 @@ const Navigation = () => {
                 : null
             }
           >
-            <HiIcons.HiOutlineShoppingBag />
-            <FaIcons.FaRegHeart />
-            <FaIcons.FaRegUser />
+            <StyledLink to="/koszyk">
+              {/* <HiIcons.HiOutlineShoppingBag /> */}
+              <Icon icon={cart} />
+            </StyledLink>
+            <StyledLink to="/ulubione">
+              {/* <FaIcons.FaRegHeart /> */}
+              <Icon icon={heart} />
+            </StyledLink>
+            <StyledLink to="/login">
+              {/* <FaIcons.FaRegUser /> */}
+              <Icon icon={user} />
+            </StyledLink>
           </NavIconsWrapper>
         </SearchBarWrapper>
       </NavigationWrapper>
