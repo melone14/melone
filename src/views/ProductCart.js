@@ -11,6 +11,7 @@ import Accordion from 'components/molecules/Accordion/Accordion';
 import ShoppingInfo from 'components/molecules/ShoppingInfo/ShoppingInfo';
 import SectionTitle from 'components/atoms/SectionTitle/SectionTitle';
 import Carousel from 'components/organisms/Carousel/Carousel';
+import Sizes from 'components/molecules/Sizes/Sizes';
 
 const Wrapper = styled.section`
   padding: 30px 0 0;
@@ -27,17 +28,8 @@ const ImageGalery = styled.div`
   max-width: 600px;
   display: flex;
   align-items: center;
-  /* background: white; */
-  /* border: 1px solid red; */
   height: 636px;
 `;
-
-// const MainImage = styled.img`
-//   width: 80%;
-//   height: auto;
-//   max-height: 636px;
-//   /* border: 1px solid green; */
-// `;
 
 const MainImage = styled.div`
   width: 80%;
@@ -108,31 +100,31 @@ const ProductSizeWrapper = styled.div`
   }
 `;
 
-const SizesWrapper = styled.div`
-  /* border: 1px solid blue; */
-  display: flex;
-  gap: 10px;
-  padding: 10px 0;
-`;
+// const SizesWrapper = styled.div`
+//   /* border: 1px solid blue; */
+//   display: flex;
+//   gap: 10px;
+//   padding: 10px 0;
+// `;
 
-const Size = styled.div`
-  padding: 10px;
-  min-width: 50px;
-  border: 2px solid ${({ theme }) => theme.colors.grey};
-  border-radius: 10px;
-  font-size: 22px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: ${({ theme }) => theme.colors.darkGrey};
-  cursor: pointer;
-  transition: all 0.3s;
+// const Size = styled.div`
+//   padding: 10px;
+//   min-width: 50px;
+//   border: 2px solid ${({ theme }) => theme.colors.grey};
+//   border-radius: 10px;
+//   font-size: 22px;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   color: ${({ theme }) => theme.colors.darkGrey};
+//   cursor: pointer;
+//   transition: all 0.3s;
 
-  &:hover {
-    color: black;
-    border-color: black;
-  }
-`;
+//   &:hover {
+//     color: black;
+//     border-color: black;
+//   }
+// `;
 
 const ButtonsWrapper = styled.div`
   height: 60px;
@@ -237,13 +229,14 @@ const ProductCart = () => {
           <ProductSizeWrapper>
             <h1>Wybierz rozmiar:</h1>
           </ProductSizeWrapper>
-          <SizesWrapper>
+          {/* <SizesWrapper>
             <Size>S</Size>
             <Size>M</Size>
             <Size>L</Size>
             <Size>XL</Size>
             <Size>XXL</Size>
-          </SizesWrapper>
+          </SizesWrapper> */}
+          <Sizes />
           <ButtonsWrapper>
             <AddToCartBtn type="submit" value="Dodaj do koszyka" />
             <WishListBtn onClick={handleHeartClick}>
