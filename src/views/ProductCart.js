@@ -100,32 +100,6 @@ const ProductSizeWrapper = styled.div`
   }
 `;
 
-// const SizesWrapper = styled.div`
-//   /* border: 1px solid blue; */
-//   display: flex;
-//   gap: 10px;
-//   padding: 10px 0;
-// `;
-
-// const Size = styled.div`
-//   padding: 10px;
-//   min-width: 50px;
-//   border: 2px solid ${({ theme }) => theme.colors.grey};
-//   border-radius: 10px;
-//   font-size: 22px;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   color: ${({ theme }) => theme.colors.darkGrey};
-//   cursor: pointer;
-//   transition: all 0.3s;
-
-//   &:hover {
-//     color: black;
-//     border-color: black;
-//   }
-// `;
-
 const ButtonsWrapper = styled.div`
   height: 60px;
   /* border: 1px solid green; */
@@ -229,13 +203,6 @@ const ProductCart = () => {
           <ProductSizeWrapper>
             <h1>Wybierz rozmiar:</h1>
           </ProductSizeWrapper>
-          {/* <SizesWrapper>
-            <Size>S</Size>
-            <Size>M</Size>
-            <Size>L</Size>
-            <Size>XL</Size>
-            <Size>XXL</Size>
-          </SizesWrapper> */}
           <Sizes />
           <ButtonsWrapper>
             <AddToCartBtn type="submit" value="Dodaj do koszyka" />

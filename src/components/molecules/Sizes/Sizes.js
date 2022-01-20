@@ -15,7 +15,7 @@ const Sizes = ({ sizes }) => {
       {dummyData.map((size) => (
         <Size
           onClick={() => handleChooseSize(size)}
-          className={activeSize == size ? 'activeSize' : null}
+          className={activeSize === size ? 'activeSize' : null}
         >
           {size}
         </Size>

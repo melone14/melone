@@ -62,14 +62,9 @@ const SubTopicWrapper = styled.div`
 
 const Accordion = () => {
   const [activeAccordion, setAccordion] = useState('materials');
-  const [activeSize, setActiveSize] = useState(null);
 
   const handleClickAccordion = (topic) => {
     topic === activeAccordion ? setAccordion('any') : setAccordion(topic);
-  };
-
-  const handleChooseSize = (size) => {
-    setActiveSize(size);
   };
 
   return (

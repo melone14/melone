@@ -25,5 +25,6 @@ export const Size = styled.div`
   &.activeSize {
     color: black;
     border-color: black;
+    background: rgba(0, 0, 0, 0.06);
   }
 `;
