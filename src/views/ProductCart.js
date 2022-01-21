@@ -20,7 +20,6 @@ const Wrapper = styled.section`
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  /* border: 1px solid blue; */
 `;
 
 const ImageGalery = styled.div`
@@ -41,13 +40,35 @@ const MainImage = styled.div`
 const SmallImagesWrapper = styled.div`
   width: 20%;
   height: 636px;
-  /* border: 1px solid green; */
-  /* background: white; */
   margin: auto 0 auto 0;
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; */
+  overflow-y: scroll;
   justify-content: space-around;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+    padding-right: 10px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    /* background: rgba(0, 0, 0, 0.3); */
+    background: inherit;
+    border-radius: 20px;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.4);
+  }
 `;
 
 const SmallImage = styled.div`
@@ -59,6 +80,7 @@ const SmallImage = styled.div`
   cursor: pointer;
   border: 2px solid transparent;
   border-radius: 10px;
+  margin: 15px auto;
 
   &:hover {
     border-color: ${({ theme }) => theme.colors.black};
@@ -137,7 +159,7 @@ const WishListBtn = styled.div`
   transition: all 0.3s;
 
   &:hover {
-    background: ${({ theme }) => theme.colors.grey};
+    background: rgba(0, 0, 0, 0.06);
     filter: brightness(1.4);
   }
 `;
@@ -179,6 +201,18 @@ const ProductCart = () => {
             <SmallImage
               img={images[1]}
               onClick={() => handleImageChange(images[1])}
+            />
+            <SmallImage
+              img={images[2]}
+              onClick={() => handleImageChange(images[2])}
+            />
+            <SmallImage
+              img={images[3]}
+              onClick={() => handleImageChange(images[3])}
+            />
+            <SmallImage
+              img={images[4]}
+              onClick={() => handleImageChange(images[4])}
             />
             <SmallImage
               img={images[2]}

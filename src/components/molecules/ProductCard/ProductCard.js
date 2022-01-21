@@ -1,11 +1,11 @@
 import {
-  // Wrapper,
   ProductImage,
   Bestseller,
   ProductTitle,
   ProductPrice,
   BestsellerWrapper,
   ProductLink,
+  // Check,
 } from './ProductCard.style';
 
 const ProductCard = ({ slider, product }) => {
@@ -22,6 +22,7 @@ const ProductCard = ({ slider, product }) => {
       </BestsellerWrapper>
       <ProductTitle>{product.name}</ProductTitle>
       <ProductPrice news={product.news}>{product.price} zł</ProductPrice>
+      {/* <Check>ZOBACZ</Check> */}
     </ProductLink>
   );
 };

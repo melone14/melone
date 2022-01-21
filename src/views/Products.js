@@ -15,7 +15,11 @@ import * as GiIcons from 'react-icons/gi';
 const Wrapper = styled.section`
   min-height: 1000px;
   display: grid;
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
   grid-template-columns: 320px 30fr 1fr;
+  /* border: 1px solid red; */
 `;
 
 const FiltersWrapper = styled.aside`
@@ -237,7 +241,7 @@ const testProducts = [
 const MenuNavigationWrapper = styled.section`
   width: 100%;
   max-width: 1400px;
-  margin: 10px auto;
+  margin: 20px auto;
   padding-left: 20px;
 `;
 

@@ -37,6 +37,7 @@ border-radius: 20px;
 ::-webkit-scrollbar-thumb {
   background: rgba(0,0,0,0.6); 
   border-radius: 20px;
+  cursor: pointer;
 }
 
 /* Handle on hover */
