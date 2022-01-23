@@ -27,6 +27,10 @@ export const ContentWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+
+  @media (max-width: 700px) {
+    flex-direction: column;
+  }
 `;
 
 export const TextWrapper = styled.div`
@@ -56,6 +60,7 @@ export const InputWrapper = styled.div`
   justify-content: space-around;
   width: 281px;
   height: 350px;
+  border: 1px solid red;
 `;
 
 export const InputInnerWrapper = styled.div`
@@ -67,6 +72,10 @@ export const InputsWrapper = styled.form`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 700px) {
+    flex-direction: column;
+  }
 `;
 
 export const Input = styled.input`

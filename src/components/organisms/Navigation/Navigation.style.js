@@ -1,15 +1,16 @@
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
+import * as FiIcons from 'react-icons/fi';
 
 export const NavigationWrapper = styled.nav`
+  display: flex;
+  justify-content: space-between;
+  height: 70px;
   background: rgba(255, 255, 255, 0);
-  height: 85px;
   width: 100%;
-  color: #383838;
   border-bottom: 0px solid white;
   box-shadow: rgb(221, 221, 221) 0px -1px inset;
-  display: grid;
-  grid-template-columns: 2fr 1fr 2fr;
+  color: #383838;
   font-size: 17px;
   position: fixed;
   top: 0;
@@ -19,6 +20,34 @@ export const NavigationWrapper = styled.nav`
   &.active {
     background: rgba(255, 255, 255, 0.95);
   }
+
+  @media (min-width: 700px) {
+    height: 80px;
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+  }
+
+  @media (min-width: 1250px) {
+    height: 85px;
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+  }
+`;
+
+export const HamburgerBtn = styled(FiIcons.FiMenu)`
+  font-size: 40px;
+  display: block;
+  color: ${({ theme }) => theme.colors.black};
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
+  display: block;
+
+  @media (min-width: 1250px) {
+    display: none;
+  }
 `;
 
 export const Logo = styled.img`
@@ -27,6 +56,11 @@ export const Logo = styled.img`
   /* border: 1px solid red; */
   display: block;
   margin: 5px auto 5px auto;
+
+  @media (max-width: 700px) {
+    height: 54px;
+    margin: 8px auto;
+  }
 `;
 
 export const NavList = styled.ul`
@@ -45,25 +79,36 @@ export const NavList = styled.ul`
     opacity: 1;
     right: 0;
   }
+
+  @media (max-width: 700px) {
+    padding: 0;
+    margin: 0;
+    margin-left: 25px;
+  }
 `;
 
 export const NavListItem = styled.li`
   font-size: 14px;
   margin-right: 25px;
+
+  @media (max-width: 700px) {
+    display: none;
+  }
 `;
 
 export const NavIconsWrapper = styled.ul`
-  /* border: 1px solid yellow; */
+  /* border: 1px solid red; */
   display: flex;
   align-items: center;
-  padding-left: 10px;
+  justify-content: space-around;
   opacity: 0;
   transition: all 0.5s ease-in-out;
   left: 1000px;
   position: relative;
   font-size: 30px;
-  padding-left: 20px;
+  margin-left: 30px;
   color: ${({ theme }) => theme.colors.black};
+  width: 120px;
 
   &.active {
     opacity: 1;
@@ -78,6 +123,33 @@ export const NavIconsWrapper = styled.ul`
 
   svg:hover {
     color: ${({ theme }) => theme.colors.grey};
+  }
+
+  @media (max-width: 700px) {
+    margin: 0;
+    margin-right: 25px;
+    width: unset;
+  }
+`;
+
+export const Icon = styled.div`
+  width: 30px;
+  height: 30px;
+  /* border: 1px solid black; */
+
+  background: url(${({ icon }) => (icon ? icon : '')}) center/cover no-repeat
+    border-box;
+
+  svg {
+    fill: ${({ theme }) => theme.colors.black};
+  }
+
+  @media (max-width: 700px) {
+    display: none;
+
+    &.cart {
+      display: block !important;
+    }
   }
 `;
 
@@ -95,6 +167,10 @@ export const SearchBarWrapper = styled.div`
     opacity: 1;
     left: 0;
   }
+
+  @media (max-width: 700px) {
+    /* display: none; */
+  }
 `;
 
 export const SearchBarInput = styled.input`
@@ -109,6 +185,10 @@ export const SearchBarInput = styled.input`
 
   &::placeholder {
     color: ${({ theme }) => theme.colors.grey};
+  }
+
+  @media (max-width: 700px) {
+    display: none;
   }
 `;
 

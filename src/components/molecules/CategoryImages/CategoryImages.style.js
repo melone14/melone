@@ -11,6 +11,12 @@ export const Wrapper = styled.section`
   display: flex;
   align-items: center;
   justify-content: space-around;
+
+  @media (max-width: 700px) {
+    flex-direction: column;
+    border: 1px solid red;
+    height: unset;
+  }
 `;
 
 export const ImageWrapper = styled.div`
@@ -34,6 +40,11 @@ export const ImageWrapper = styled.div`
     text-transform: uppercase;
     transition: all 0.5s;
     border-radius: 20px;
+  }
+
+  @media (max-width: 700px) {
+    width: 55%;
+    max-width: unset;
   }
 `;
 

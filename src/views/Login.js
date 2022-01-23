@@ -1,10 +1,10 @@
 import styled from 'styled-components';
-import { Formik } from 'formik';
-import * as Yup from 'yup';
+// import { Formik } from 'formik';
+// import * as Yup from 'yup';
 
 const Wrapper = styled.section`
   height: 85vh;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -13,7 +13,6 @@ const Wrapper = styled.section`
 const LoginWrapper = styled.div`
   width: 50%;
   border-right: 2px solid ${({ theme }) => theme.colors.black};
-  /* border: 2px solid ${({ theme }) => theme.colors.black}; */
   height: 400px;
   display: flex;
   justify-content: center;
@@ -32,7 +31,49 @@ const FormWrapper = styled.form`
   width: 70%;
   max-width: 400px;
   height: 500px;
-  border: 1px solid red;
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
+const StyledInput = styled.input`
+  border: 1px solid black;
+  padding: 8px;
+  padding-left: 13px;
+  font-size: 16px;
+  width: 300px;
+  height: 50px;
+  border-radius: 0;
+  margin-bottom: 10px;
+  outline: none;
+  background: inherit;
+  color: ${({ theme }) => theme.colors.black};
+`;
+
+const SectionTitle = styled.h1`
+  font-size: 24px;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 25px;
+`;
+
+const SubmitBtn = styled.input`
+  border: 1px solid ${({ theme }) => theme.colors.black};
+  color: white;
+  width: 200px;
+  height: 45px;
+  cursor: pointer;
+  background: ${({ theme }) => theme.colors.black};
+  transition: all 0.4s;
+  margin-top: 10px;
+  font-size: 18px;
+
+  &:hover {
+    background: inherit;
+    color: ${({ theme }) => theme.colors.black};
+  }
 `;
 
 const Login = () => {
@@ -40,76 +81,22 @@ const Login = () => {
     <Wrapper>
       <LoginWrapper>
         <FormWrapper>
-          {/* <Formik
-            initialValues={{
-              email: '',
-              password: '',
-            }}
-            validationSchema={Yup.object({
-              email: Yup.string()
-                .email('Nieprawidłowy mail')
-                .required('Required'),
-             password: Yup.password()
-            })}
-            onSubmit={(values, { setSubmitting }) => {
-              console.log('1');
-              setTimeout(() => {
-                alert(JSON.stringify(values, null, 2));
-                setSubmitting(false);
-              }, 400);
-            }}
-          >
-            {(formik) => (
-              <InputsWrapper onSubmit={formik.handleSubmit}>
-                <div>
-                  <Input
-                    placeholder="Imię"
-                    bottomSpace
-                    id="firstName"
-                    type="text"
-                    {...formik.getFieldProps('firstName')}
-                  />
-                  {formik.touched.firstName && formik.errors.firstName ? (
-                    <div>{formik.errors.firstName}</div>
-                  ) : null}
-                  <Input
-                    placeholder="Adres e-mail"
-                    id="email"
-                    type="email"
-                    {...formik.getFieldProps('email')}
-                  />
-                  {formik.touched.email && formik.errors.email ? (
-                    <div>{formik.errors.email}</div>
-                  ) : null}
-                  <CheckboxsWrapper>
-                    <Gender>
-                      <Checkbox
-                        type="checkbox"
-                        id="women"
-                        name="gender"
-                        value="women"
-                      />
-                      <Label htmlFor="women">Kobiety</Label>
-                    </Gender>
-                    <Gender>
-                      <Checkbox
-                        type="checkbox"
-                        id="men"
-                        name="gender"
-                        value="men"
-                      />
-                      <Label htmlFor="men">Mężczyźni</Label>
-                    </Gender>
-                  </CheckboxsWrapper>
-                </div>
-                <SubmitButton type="submit">Wyślij</SubmitButton>
-              </InputsWrapper>
-            )}
-          </Formik> */}
+          <SectionTitle>Zaloguj się</SectionTitle>
+          <StyledInput type="email" placeholder="E-mail" />
+          <StyledInput type="password" placeholder="Hasło" />
+          <SubmitBtn type="submit" value="Zaloguj" />
         </FormWrapper>
       </LoginWrapper>
       <RegisterWrapper>
-        <FormWrapper></FormWrapper>
+        <FormWrapper>
+          <SectionTitle>Zaresejstruj się</SectionTitle>
+          <StyledInput type="text" placeholder="Imię" />
+          <StyledInput type="text" placeholder="Nazwisko" />
+          <StyledInput type="email" placeholder="E-mail" />
+          <StyledInput type="password" placeholder="Hasło" />
+          <StyledInput type="password" placeholder="Powtórz hasło" />
+          <SubmitBtn type="submit" value="Zarejestruj" />
+        </FormWrapper>
       </RegisterWrapper>
     </Wrapper>
   );

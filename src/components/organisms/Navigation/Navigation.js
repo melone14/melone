@@ -7,43 +7,16 @@ import {
   SearchBarInput,
   SearchBarWrapper,
   StyledLink,
+  Icon,
+  HamburgerBtn,
 } from './Navigation.style';
 import { useEffect, useState } from 'react';
 import logo from 'assets/images/logo.png';
 import { Link, useLocation } from 'react-router-dom';
-import * as FaIcons from 'react-icons/fa';
-import * as HiIcons from 'react-icons/hi';
-import styled from 'styled-components';
 
 import heart from 'assets/icons/heart.svg';
 import user from 'assets/icons/user.svg';
 import cart from 'assets/icons/cart.svg';
-
-const Basket = styled.div`
-  position: absolute;
-  top: 30px;
-  right: 0;
-  width: 300px;
-  height: 200px;
-  border: 1px solid red;
-`;
-
-const Icon = styled.div`
-  width: 30px;
-  height: 30px;
-  /* border: 1px solid black; */
-
-  background: url(${({ icon }) => (icon ? icon : '')}) center/cover no-repeat
-    border-box;
-
-  svg {
-    fill: ${({ theme }) => theme.colors.black};
-  }
-`;
-
-// const StyledLink = styled(Link)`
-//   color: ${({ theme }) => theme.colors.black};
-// `;
 
 const Navigation = () => {
   const [navbarScroll, setNavbarScroll] = useState(false);
@@ -92,6 +65,7 @@ const Navigation = () => {
           <NavListItem>
             <StyledLink to="/wyprzedaz">WYPRZEDAŻ</StyledLink>
           </NavListItem>
+          <HamburgerBtn />
         </NavList>
         <Link to="/">
           <Logo src={logo} />
@@ -117,7 +91,7 @@ const Navigation = () => {
           >
             <StyledLink to="/koszyk">
               {/* <HiIcons.HiOutlineShoppingBag /> */}
-              <Icon icon={cart} />
+              <Icon icon={cart} className="cart" />
             </StyledLink>
             <StyledLink to="/ulubione">
               {/* <FaIcons.FaRegHeart /> */}
