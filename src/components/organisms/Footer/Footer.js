@@ -12,13 +12,16 @@ import logo from 'assets/images/logo.png';
 import facebook from 'assets/icons/facebook.svg';
 import instagram from 'assets/icons/instagram.svg';
 import youtube from 'assets/icons/youtube.svg';
+import * as BiIcons from 'react-icons/bi';
 
 const Footer = () => {
   return (
     <Wrapper>
       <InnerWrapper>
         <ListWrapper>
-          <p>MELONE</p>
+          <p>
+            MELONE <BiIcons.BiChevronUp />
+          </p>
 
           <li>
             <FooterLink to="/o-nas">O Nas</FooterLink>
@@ -74,39 +77,41 @@ const Footer = () => {
         </ListWrapper>
         <ListWrapper>
           <p>Kontakt</p>
-          <h2>Infolinia</h2>
-          <h2>pon. - pt. 8:00 - 20:00</h2>
-          <h2> sob. - ns. 9:00 - 17:00</h2>
-          <a href="tel:504843220">Tel. 504 84 32 20</a>
-          <br /> <br />
-          <h2>Współpraca</h2>
-          <a href="mailto:bok@melone.pl">bok@melone.pl</a>
-          <br /> <br />
-          <h2>Inspektor Danych Osobowych</h2>
-          <a href="mailto:iod@melone.pl">iod@melone.pl</a>
-          <SocialWrapper>
-            <a
-              href="https://www.facebook.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <SocialIcon src={facebook} />
-            </a>
-            <a
-              href="https://www.youtube.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <SocialIcon src={youtube} />
-            </a>
-            <a
-              href="https://www.instagram.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <SocialIcon src={instagram} />
-            </a>
-          </SocialWrapper>
+          <div>
+            <h2>Infolinia</h2>
+            <h2>pon. - pt. 8:00 - 20:00</h2>
+            <h2> sob. - ns. 9:00 - 17:00</h2>
+            <a href="tel:504843220">Tel. 504 84 32 20</a>
+            <br /> <br />
+            <h2>Współpraca</h2>
+            <a href="mailto:bok@melone.pl">bok@melone.pl</a>
+            <br /> <br />
+            <h2>Inspektor Danych Osobowych</h2>
+            <a href="mailto:iod@melone.pl">iod@melone.pl</a>
+            <SocialWrapper>
+              <a
+                href="https://www.facebook.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <SocialIcon src={facebook} />
+              </a>
+              <a
+                href="https://www.youtube.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <SocialIcon src={youtube} />
+              </a>
+              <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <SocialIcon src={instagram} />
+              </a>
+            </SocialWrapper>
+          </div>
         </ListWrapper>
       </InnerWrapper>
       <Logo src={logo} />

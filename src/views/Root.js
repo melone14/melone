@@ -9,6 +9,7 @@ import Footer from 'components/organisms/Footer/Footer';
 import Products from './Products';
 import ProductCart from './ProductCart';
 import Login from './Login';
+import TestFooter from 'components/organisms/Footer/testFooter/testFooter';
 
 const Root = () => (
   <div>
@@ -25,7 +26,8 @@ const Root = () => (
           <Route path="/login" element={<Login />} />
         </Routes>
       </MainTemplate>
-      <Footer />
+      {/* <Footer /> */}
+      <TestFooter />
     </ThemeProvider>
   </div>
 );

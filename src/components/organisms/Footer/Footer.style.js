@@ -14,6 +14,10 @@ export const InnerWrapper = styled.section`
   justify-content: space-around;
   border-top: 1px solid ${({ theme }) => theme.colors.lightGrey};
   padding-top: 30px;
+
+  @media (max-width: 800px) {
+    flex-direction: column;
+  }
 `;
 
 export const ListWrapper = styled.ul`
@@ -39,7 +43,19 @@ export const ListWrapper = styled.ul`
   }
 
   a:hover {
-    font-weight: bold;
+    color: black;
+  }
+
+  @media (max-width: 800px) {
+    border: 1px solid red;
+    width: 95%;
+    margin: 0 auto;
+    padding: 8px 0 8px 10px;
+    font-size: 12px;
+
+    p {
+      padding: 0;
+    }
   }
 `;
 
