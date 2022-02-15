@@ -3,35 +3,57 @@ import styled from 'styled-components';
 // import * as Yup from 'yup';
 
 const Wrapper = styled.section`
-  height: 85vh;
-  /* border: 1px solid red; */
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0 auto;
+
+  flex-direction: column;
+  height: unset;
+  overflow-y: hidden;
+  padding-bottom: 40px;
+
+  @media (min-width: 900px) {
+    max-width: 1500px;
+    height: 85vh;
+    flex-direction: row;
+  }
 `;
 
 const LoginWrapper = styled.div`
-  width: 50%;
-  border-right: 2px solid ${({ theme }) => theme.colors.black};
-  height: 400px;
+  width: 95%;
+  border-bottom: 2px solid ${({ theme }) => theme.colors.black};
+  margin-bottom: 40px;
+  height: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (min-width: 900px) {
+    width: 50%;
+    border: none;
+    border-right: 2px solid ${({ theme }) => theme.colors.black};
+    height: 400px;
+  }
 `;
 
 const RegisterWrapper = styled.div`
-  width: 50%;
+  width: 95%;
   height: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (min-width: 900px) {
+    width: 50%;
+    border: none;
+  }
 `;
 
 const FormWrapper = styled.form`
   width: 70%;
   max-width: 400px;
   height: 500px;
-  /* border: 1px solid red; */
   display: flex;
   flex-direction: column;
   justify-content: center;
