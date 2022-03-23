@@ -27,4 +27,10 @@ export const Size = styled.div`
     border-color: black;
     background: rgba(0, 0, 0, 0.06);
   }
+
+  @media (max-width: 1250px) {
+    min-width: 45px;
+    font-size: 18px;
+    padding: 8px;
+  }
 `;

@@ -2,6 +2,11 @@
   position: relative;
   /* background: blue; */
   width: 100%;
+
+  /* background-color: red;
+  border: 1px solid green;
+  width: 95vw; */
+  /* margin: 0 auto; */
 }
 .slides .slick-prev,
 .slides .slick-next {

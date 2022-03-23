@@ -3,7 +3,7 @@ import kamizelka from 'assets/images/kamizelka.jpeg';
 import plaszcz from 'assets/images/plaszcz.jpeg';
 import spodnie from 'assets/images/spodnie.jpeg';
 
-const { Wrapper } = require('./NewCollection.style');
+import { Wrapper } from './NewCollection.style';
 
 const testProducts = [
   {

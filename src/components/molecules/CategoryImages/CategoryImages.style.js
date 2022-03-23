@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom';
 export const Wrapper = styled.section`
   width: 100%;
   max-width: 1400px;
-  height: 700px;
+  /* height: 700px; */
+  padding: 30px 0;
   margin: 40px auto;
   margin-bottom: 0;
   /* border: 1px solid red; */
@@ -12,21 +13,20 @@ export const Wrapper = styled.section`
   align-items: center;
   justify-content: space-around;
 
-  @media (max-width: 700px) {
+  @media (max-width: 800px) {
     flex-direction: column;
-    border: 1px solid red;
     height: unset;
+    padding-bottom: 0;
   }
 `;
 
 export const ImageWrapper = styled.div`
   width: 30%;
   max-width: 437px;
-  height: 655px;
   background: grey;
   position: relative;
   overflow: hidden;
-  border-radius: 20px;
+  border-radius: 20px 20px 0 0;
 
   p {
     display: block;
@@ -34,17 +34,21 @@ export const ImageWrapper = styled.div`
     text-align: center;
     background: rgba(255, 255, 255, 0.85);
     position: absolute;
-    left: 7px;
-    right: 7px;
-    bottom: 7px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
     text-transform: uppercase;
     transition: all 0.5s;
-    border-radius: 20px;
   }
 
-  @media (max-width: 700px) {
-    width: 55%;
-    max-width: unset;
+  @media (max-width: 800px) {
+    width: 80%;
+    margin-bottom: 30px;
+
+    p {
+      padding: 10px 0;
+      font-size: 13px;
+    }
   }
 `;
 

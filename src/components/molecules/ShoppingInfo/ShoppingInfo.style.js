@@ -9,6 +9,12 @@ export const Wrapper = styled.section`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: 1250px) {
+    border: 1px solid red;
+    height: unset;
+    flex-direction: column;
+  }
 `;
 
 export const InfoWrapper = styled.div`
@@ -21,6 +27,11 @@ export const InfoWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 1250px) {
+    width: 80%;
+    margin-bottom: 25px;
+  }
 `;
 
 export const Header = styled.div`
@@ -31,6 +42,10 @@ export const Header = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 1250px) {
+    width: 72%;
+  }
 `;
 
 export const InfoTitle = styled.h1`

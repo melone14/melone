@@ -16,6 +16,10 @@ export const BackgroundImage = styled.div`
   padding: 80px 0;
   margin: 0 auto;
   background: url(${bg2}) center/cover no-repeat border-box;
+
+  @media (max-width: 1100px) {
+    width: 94%;
+  }
 `;
 
 export const ContentWrapper = styled.div`
@@ -28,8 +32,10 @@ export const ContentWrapper = styled.div`
   align-items: center;
   justify-content: space-evenly;
 
-  @media (max-width: 700px) {
+  @media (max-width: 1100px) {
     flex-direction: column;
+    justify-content: center;
+    height: 505px;
   }
 `;
 
@@ -52,6 +58,26 @@ export const TextWrapper = styled.div`
     font-weight: 400;
     line-height: 1.3;
   }
+
+  @media (max-width: 600px) {
+    h1 {
+      font-size: 26px;
+    }
+
+    p {
+      font-size: 18px;
+    }
+
+    h1,
+    p {
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 1100px) {
+    width: 95%;
+    max-width: 612px;
+  }
 `;
 
 export const InputWrapper = styled.div`
@@ -60,12 +86,17 @@ export const InputWrapper = styled.div`
   justify-content: space-around;
   width: 281px;
   height: 350px;
-  border: 1px solid red;
+
+  @media (max-width: 1100px) {
+    width: 300px;
+    border: 1px solid red;
+  }
 `;
 
 export const InputInnerWrapper = styled.div`
   display: flex;
   align-items: center;
+  border: 1px solid red;
 `;
 
 export const InputsWrapper = styled.form`
@@ -88,6 +119,7 @@ export const Input = styled.input`
   border-bottom: 2px solid ${({ theme }) => theme.colors.black};
   outline: none;
   margin-bottom: ${({ bottomSpace }) => (bottomSpace ? '15px' : '0')};
+  border: 1px solid red;
 `;
 
 export const CheckboxsWrapper = styled.div`

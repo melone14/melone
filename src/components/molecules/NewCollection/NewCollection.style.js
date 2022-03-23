@@ -19,4 +19,19 @@ export const Wrapper = styled.section`
     position: relative;
     bottom: 50px;
   }
+
+  @media (max-width: 800px) {
+    flex-direction: column;
+    height: unset;
+
+    a:nth-child(odd) {
+      position: relative;
+      top: 0px;
+    }
+
+    a:nth-child(2) {
+      position: relative;
+      bottom: 0px;
+    }
+  }
 `;

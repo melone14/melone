@@ -6,6 +6,11 @@ import { useState } from 'react/cjs/react.development';
 const Wrapper = styled.div`
   width: 100%;
   height: 272px;
+
+  @media (max-width: 1250px) {
+    height: unset;
+    padding-bottom: 30px;
+  }
 `;
 
 const TopicWrapper = styled.div`
@@ -49,6 +54,10 @@ const Content = styled.div`
 
   &.hiddenAccordion {
     display: none;
+  }
+
+  @media (max-width: 1250px) {
+    max-height: 115px;
   }
 `;
 
@@ -135,6 +144,7 @@ const Accordion = () => {
           className={
             activeAccordion === 'infos' ? 'visibleAccordion' : 'hiddenAccordion'
           }
+          style={{ overflowY: 'scroll' }}
         >
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam
           dignissimos deleniti officia deserunt voluptatem accusamus velit
