@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import * as BiIcons from 'react-icons/bi';
-import { useState } from 'react/cjs/react.development';
+import { useState } from 'react';
 
 const Wrapper = styled.div`
   width: 100%;

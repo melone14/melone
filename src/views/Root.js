@@ -5,7 +5,6 @@ import Navigation from 'components/organisms/Navigation/Navigation';
 import MainTemplate from 'templates/MainTemplate/MainTemplate';
 import Home from 'views/Home';
 import { Routes, Route } from 'react-router-dom';
-import Footer from 'components/organisms/Footer/Footer';
 import Products from './Products';
 import ProductCart from './ProductCart';
 import Login from './Login';
@@ -26,7 +25,6 @@ const Root = () => (
           <Route path="/login" element={<Login />} />
         </Routes>
       </MainTemplate>
-      {/* <Footer /> */}
       <TestFooter />
     </ThemeProvider>
   </div>

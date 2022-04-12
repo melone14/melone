@@ -14,16 +14,13 @@ export const ProductLink = styled(Link)`
   width: ${({ slider, news }) => (news ? '380px' : slider ? '346px' : '360px')};
   padding: ${({ slider, news }) =>
     news ? '0' : slider ? '50px 40px' : '39px 0 38px 0'};
-  background: ${({ slider, news }) =>
-    news ? '#fcfcfc' : slider ? '#f2f2f2' : 'white'};
-  border-radius: ${({ slider, news }) =>
-    news ? '20px' : slider ? '20px' : '0'};
+  background: #f2f2f2;
+  border-radius: 20px;
   display: block;
 
   &:hover {
     & p:first-of-type {
       color: ${({ theme }) => theme.colors.orange};
-      font-size: 18px;
     }
   }
 
