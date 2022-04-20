@@ -8,7 +8,7 @@ import { Routes, Route } from 'react-router-dom';
 import Products from './Products';
 import ProductCart from './ProductCart';
 import Login from './Login';
-import TestFooter from 'components/organisms/Footer/testFooter/testFooter';
+import Footer from 'components/organisms/Footer/Footer';
 
 const Root = () => (
   <div>
@@ -25,7 +25,7 @@ const Root = () => (
           <Route path="/login" element={<Login />} />
         </Routes>
       </MainTemplate>
-      <TestFooter />
+      <Footer />
     </ThemeProvider>
   </div>
 );

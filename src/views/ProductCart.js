@@ -239,7 +239,7 @@ const WishListBtn = styled.div`
   }
 `;
 
-const Description = styled.p`
+const Description = styled.div`
   font-size: 16px;
   display: block;
   max-width: 1200px;
@@ -257,6 +257,8 @@ const Description = styled.p`
     padding: 8px 20px;
   }
 `;
+
+const dummyData = ['S', 'M', 'L', 'XL', 'XXL'];
 
 const ProductCart = () => {
   const activeImg = foto5;
@@ -317,7 +319,7 @@ const ProductCart = () => {
           <ProductSizeWrapper>
             <h1>Wybierz rozmiar:</h1>
           </ProductSizeWrapper>
-          <Sizes />
+          <Sizes sizes={dummyData} />
           <ButtonsWrapper>
             <AddToCartBtn type="submit" value="Dodaj do koszyka" />
             <WishListBtn onClick={handleHeartClick}>

@@ -7,6 +7,7 @@ import {
   ProductLink,
   // Check,
 } from './ProductCard.style';
+import PropTypes from 'prop-types';
 
 const ProductCard = ({ slider, product }) => {
   return (
@@ -25,6 +26,11 @@ const ProductCard = ({ slider, product }) => {
       {/* <Check>ZOBACZ</Check> */}
     </ProductLink>
   );
+};
+
+ProductCard.propTypes = {
+  slider: PropTypes.string,
+  product: PropTypes.object,
 };
 
 export default ProductCard;
