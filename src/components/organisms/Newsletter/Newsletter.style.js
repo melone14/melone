@@ -89,14 +89,14 @@ export const InputWrapper = styled.div`
 
   @media (max-width: 1100px) {
     width: 300px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
   }
 `;
 
 export const InputInnerWrapper = styled.div`
   display: flex;
   align-items: center;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 `;
 
 export const InputsWrapper = styled.form`
@@ -119,7 +119,7 @@ export const Input = styled.input`
   border-bottom: 2px solid ${({ theme }) => theme.colors.black};
   outline: none;
   margin-bottom: ${({ bottomSpace }) => (bottomSpace ? '15px' : '0')};
-  border: 1px solid red;
+  /* border: 1px solid red; */
 `;
 
 export const CheckboxsWrapper = styled.div`
@@ -169,5 +169,9 @@ export const SubmitButton = styled.button`
     background: ${({ theme }) => theme.colors.black};
     border: 2px solid inherit;
     color: white;
+  }
+
+  @media (max-width: 1000px) {
+    height: 51px;
   }
 `;
