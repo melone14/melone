@@ -10,6 +10,7 @@ import Basket from './Basket';
 import ProductCart from './ProductCart';
 import Login from './Login';
 import Footer from 'components/organisms/Footer/Footer';
+import WishList from './WishList';
 
 const Root = () => (
   <div>
@@ -25,6 +26,7 @@ const Root = () => (
           <Route path="/products/:id" element={<ProductCart />} />
           <Route path="/login" element={<Login />} />
           <Route path="/koszyk" element={<Basket />} />
+          <Route path="/ulubione" element={<WishList />} />
         </Routes>
       </MainTemplate>
       <Footer />
