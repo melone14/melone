@@ -6,6 +6,7 @@ import MainTemplate from 'templates/MainTemplate/MainTemplate';
 import Home from 'views/Home';
 import { Routes, Route } from 'react-router-dom';
 import Products from './Products';
+import Basket from './Basket';
 import ProductCart from './ProductCart';
 import Login from './Login';
 import Footer from 'components/organisms/Footer/Footer';
@@ -23,6 +24,7 @@ const Root = () => (
           <Route path="/wyprzedaz" element={<Products />} />
           <Route path="/products/:id" element={<ProductCart />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/koszyk" element={<Basket />} />
         </Routes>
       </MainTemplate>
       <Footer />

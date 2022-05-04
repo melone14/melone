@@ -17,7 +17,7 @@ export const Wrapper = styled.section`
 
   a:nth-child(2) {
     position: relative;
-    bottom: 50px;
+    bottom: 20px;
   }
 
   @media (max-width: 800px) {

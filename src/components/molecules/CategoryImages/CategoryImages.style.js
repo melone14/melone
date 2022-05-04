@@ -26,7 +26,7 @@ export const ImageWrapper = styled.div`
   background: grey;
   position: relative;
   overflow: hidden;
-  border-radius: 20px 20px 0 0;
+  border-radius: 13px 13px 0 0;
 
   p {
     display: block;
