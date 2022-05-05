@@ -138,6 +138,14 @@ const Order = styled.div`
     }
   }
 
+  div.total {
+    border-top: 1px solid ${({ theme }) => theme.colors.darkGrey};
+    width: 95%;
+    margin: 5px auto;
+    padding-top: 5px;
+    font-weight: 600;
+  }
+
   button {
     background: ${({ theme }) => theme.colors.black};
     color: white;
@@ -301,6 +309,10 @@ const Basket = () => {
             <div>
               <p>Dostawa</p>
               <p>0,00 zł</p>
+            </div>
+            <div className="total">
+              <p>RAZEM: </p>
+              <p>364,50 zł</p>
             </div>
             <button>PRZEJDŹ DO KASY</button>
           </Order>
