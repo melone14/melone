@@ -2,6 +2,13 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import SectionTitle from 'components/atoms/SectionTitle/SectionTitle';
 import * as FaIcons from 'react-icons/fa';
+import {
+  InfoTitle,
+  StyledIcon,
+} from 'components/molecules/ShoppingInfo/ShoppingInfo.style';
+import * as BsIcons from 'react-icons/bs';
+import deliveryIcon from 'assets/icons/deliveryIcon.svg';
+import returnIcon from 'assets/icons/returnIcon.svg';
 
 const Wrapper = styled.main`
   width: 95%;
@@ -117,6 +124,9 @@ const OrderWrapper = styled.div``;
 const Order = styled.div`
   border: 1px solid ${({ theme }) => theme.colors.darkGrey};
   padding: 10px;
+  position: sticky;
+
+  top: 50px;
 
   h1 {
     font-size: 20px;
@@ -161,6 +171,15 @@ const Order = styled.div`
       color: ${({ theme }) => theme.colors.black};
     }
   }
+`;
+
+const InfosWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  padding-left: 40px;
+  margin-top: 50px;
+  justify-content: space-around;
 `;
 
 const Basket = () => {
@@ -316,6 +335,20 @@ const Basket = () => {
             </div>
             <button>PRZEJDŹ DO KASY</button>
           </Order>
+
+          <InfosWrapper>
+            <InfoTitle>
+              <StyledIcon h="29px" icon={deliveryIcon} /> Bezpieczna wysyłka
+            </InfoTitle>
+            <InfoTitle>
+              <StyledIcon icon={returnIcon} />
+              14 dni na zwrot
+            </InfoTitle>
+            <InfoTitle>
+              <BsIcons.BsLock />
+              bezpieczna płatność
+            </InfoTitle>
+          </InfosWrapper>
         </OrderWrapper>
       </Wrapper>
     </>
