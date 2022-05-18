@@ -13,7 +13,7 @@ export const Title = styled.h1`
 
   &::after {
     content: '';
-    display: block;
+    display: ${({ withoutUnderline }) => (withoutUnderline ? 'none' : 'block')};
     position: absolute;
     /* width: 100px; */
     bottom: -5px;
