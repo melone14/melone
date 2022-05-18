@@ -7,16 +7,14 @@ import {
   SearchBarInput,
   SearchBarWrapper,
   StyledLink,
-  Icon,
+  // Icon,
   HamburgerBtn,
 } from './Navigation.style';
 import { useEffect, useState } from 'react';
 import logo from 'assets/images/logo.png';
 import { Link, useLocation } from 'react-router-dom';
 
-import heart from 'assets/icons/heart.svg';
-import user from 'assets/icons/user.svg';
-import cart from 'assets/icons/cart.svg';
+import * as FiIcons from 'react-icons/fi';
 
 const Navigation = () => {
   const [navbarScroll, setNavbarScroll] = useState(false);
@@ -90,16 +88,13 @@ const Navigation = () => {
             }
           >
             <StyledLink to="/koszyk">
-              {/* <HiIcons.HiOutlineShoppingBag /> */}
-              <Icon icon={cart} className="cart" />
+              <FiIcons.FiShoppingBag />
             </StyledLink>
             <StyledLink to="/ulubione">
-              {/* <FaIcons.FaRegHeart /> */}
-              <Icon icon={heart} />
+              <FiIcons.FiHeart />
             </StyledLink>
             <StyledLink to="/login">
-              {/* <FaIcons.FaRegUser /> */}
-              <Icon icon={user} />
+              <FiIcons.FiUser />
             </StyledLink>
           </NavIconsWrapper>
         </SearchBarWrapper>

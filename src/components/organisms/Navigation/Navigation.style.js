@@ -119,6 +119,7 @@ export const NavIconsWrapper = styled.ul`
     margin-right: 5px;
     cursor: pointer;
     transition: all 0.3s;
+    stroke-width: 1.4px;
   }
 
   svg:hover {
@@ -132,29 +133,7 @@ export const NavIconsWrapper = styled.ul`
   }
 `;
 
-export const Icon = styled.div`
-  width: 30px;
-  height: 30px;
-  /* border: 1px solid black; */
-
-  background: url(${({ icon }) => (icon ? icon : '')}) center/cover no-repeat
-    border-box;
-
-  svg {
-    fill: ${({ theme }) => theme.colors.black};
-  }
-
-  @media (max-width: 700px) {
-    display: none;
-
-    &.cart {
-      display: block !important;
-    }
-  }
-`;
-
 export const SearchBarWrapper = styled.div`
-  /* border: 1px solid #383838; */
   display: flex;
   align-items: center;
   justify-content: center;
