@@ -7,7 +7,6 @@ import {
   SearchBarInput,
   SearchBarWrapper,
   StyledLink,
-  // Icon,
   HamburgerBtn,
 } from './Navigation.style';
 import { useEffect, useState } from 'react';
