@@ -176,6 +176,11 @@ export const StyledLink = styled(NavLink)`
   text-decoration: none;
   font-weight: 500;
   transition: all 0.2s;
+  position: relative;
+
+  .dropdown {
+    display: none;
+  }
 
   &.active {
     font-weight: 600;
@@ -185,5 +190,32 @@ export const StyledLink = styled(NavLink)`
     color: ${({ theme }) => theme.colors.grey};
     border-bottom: 1px solid ${({ theme }) => theme.colors.grey};
     padding-bottom: 10px;
+
+    .dropdown {
+      display: block;
+    }
+  }
+
+  &.cartIcon::after {
+    content: '';
+    display: block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: red;
+    position: absolute;
+    top: -8px;
+    right: -1px;
+    z-index: 2;
+  }
+
+  span {
+    position: absolute;
+    font-size: 11px;
+    color: white;
+    font-weight: bold;
+    top: -6px;
+    right: 4px;
+    z-index: 4;
   }
 `;

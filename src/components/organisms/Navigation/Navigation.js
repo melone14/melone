@@ -9,15 +9,18 @@ import {
   StyledLink,
   HamburgerBtn,
 } from './Navigation.style';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
 import logo from 'assets/images/logo.png';
 import { Link, useLocation } from 'react-router-dom';
+import { cartContext } from 'context/cartContext';
 
 import * as FiIcons from 'react-icons/fi';
+import CartDropdown from 'components/molecules/CartDropdown/CartDropdown';
 
 const Navigation = () => {
   const [navbarScroll, setNavbarScroll] = useState(false);
   const { pathname } = useLocation();
+  const { products } = useContext(cartContext);
 
   const handleNavbarScroll = () => {
     if (window.scrollY >= 2) {
@@ -86,8 +89,10 @@ const Navigation = () => {
                 : null
             }
           >
-            <StyledLink to="/koszyk">
+            <StyledLink to="/koszyk" className="cartIcon">
+              <span>{products.length}</span>
               <FiIcons.FiShoppingBag />
+              <CartDropdown />
             </StyledLink>
             <StyledLink to="/ulubione">
               <FiIcons.FiHeart />
