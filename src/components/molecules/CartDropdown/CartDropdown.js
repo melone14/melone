@@ -1,20 +1,19 @@
-import { Wrapper } from './CartDropdown.style';
+import { Button, ProductsWrapper, Wrapper } from './CartDropdown.style';
 import { useContext } from 'react';
 
 import { cartContext } from 'context/cartContext';
+import DropdownItem from 'components/atoms/DropdownItem/DropdownItem';
 
 const CartDropdown = () => {
   const { products } = useContext(cartContext);
   return (
     <Wrapper className="dropdown">
-      CartDropdown
-      {products.map(({ name, price, image }) => (
-        <div>
-          <h1>{name}</h1>
-          <p>{price}</p>
-          <img src={image} alt={name} />
-        </div>
-      ))}
+      <ProductsWrapper>
+        {products.map((product) => (
+          <DropdownItem product={product} />
+        ))}
+      </ProductsWrapper>
+      <Button>Koszyk</Button>
     </Wrapper>
   );
 };
