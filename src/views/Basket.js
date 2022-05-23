@@ -10,6 +10,8 @@ import * as BsIcons from 'react-icons/bs';
 import deliveryIcon from 'assets/icons/deliveryIcon.svg';
 import returnIcon from 'assets/icons/returnIcon.svg';
 
+import foto from 'assets/images/3.png';
+
 const Wrapper = styled.main`
   width: 95%;
   max-width: 1360px;
@@ -203,7 +205,7 @@ const Basket = () => {
             <BasketProduct>
               <td>
                 <Link to="/products/jakisprodukt">
-                  <img src="assets/images/kamizelka.jpeg" alt="" />
+                  <img src={foto} alt="" />
                 </Link>
               </td>
               <td>
@@ -232,7 +234,7 @@ const Basket = () => {
             <BasketProduct>
               <td>
                 <Link to="/products/jakisprodukt">
-                  <img src="assets/images/kamizelka.jpeg" alt="" />
+                  <img src={foto} alt="" />
                 </Link>
               </td>
               <td>
@@ -261,7 +263,7 @@ const Basket = () => {
             <BasketProduct>
               <td>
                 <Link to="/products/jakisprodukt">
-                  <img src="assets/images/kamizelka.jpeg" alt="" />
+                  <img src={foto} alt="" />
                 </Link>
               </td>
               <td>
@@ -290,7 +292,94 @@ const Basket = () => {
             <BasketProduct>
               <td>
                 <Link to="/products/jakisprodukt">
-                  <img src="assets/images/kamizelka.jpeg" alt="" />
+                  <img src={foto} alt="" />
+                </Link>
+              </td>
+              <td>
+                <div>
+                  <ProductName>
+                    <Link to="/products/jakisprodukt">
+                      T-Shirt miami palm men white
+                    </Link>
+                  </ProductName>
+                  <ProductDetails>GID: 298319</ProductDetails>
+                  <ProductDetails>Kolor: Biały</ProductDetails>
+                  <ProductDetails>Rozmiar: XL</ProductDetails>
+                </div>
+              </td>
+              <td>164,50 zł</td>
+              <td>
+                <Quantity>
+                  <button>-</button>1<button>+</button>
+                </Quantity>
+              </td>
+              <td>164,50 zł</td>
+              <td className="trashIcon">
+                <FaIcons.FaTrashAlt />
+              </td>
+            </BasketProduct>
+            <BasketProduct>
+              <td>
+                <Link to="/products/jakisprodukt">
+                  <img src={foto} alt="" />
+                </Link>
+              </td>
+              <td>
+                <div>
+                  <ProductName>
+                    <Link to="/products/jakisprodukt">
+                      T-Shirt miami palm men white
+                    </Link>
+                  </ProductName>
+                  <ProductDetails>GID: 298319</ProductDetails>
+                  <ProductDetails>Kolor: Biały</ProductDetails>
+                  <ProductDetails>Rozmiar: XL</ProductDetails>
+                </div>
+              </td>
+              <td>164,50 zł</td>
+              <td>
+                <Quantity>
+                  <button>-</button>1<button>+</button>
+                </Quantity>
+              </td>
+              <td>164,50 zł</td>
+              <td className="trashIcon">
+                <FaIcons.FaTrashAlt />
+              </td>
+            </BasketProduct>
+            <BasketProduct>
+              <td>
+                <Link to="/products/jakisprodukt">
+                  <img src={foto} alt="" />
+                </Link>
+              </td>
+              <td>
+                <div>
+                  <ProductName>
+                    <Link to="/products/jakisprodukt">
+                      T-Shirt miami palm men white
+                    </Link>
+                  </ProductName>
+                  <ProductDetails>GID: 298319</ProductDetails>
+                  <ProductDetails>Kolor: Biały</ProductDetails>
+                  <ProductDetails>Rozmiar: XL</ProductDetails>
+                </div>
+              </td>
+              <td>164,50 zł</td>
+              <td>
+                <Quantity>
+                  <button>-</button>1<button>+</button>
+                </Quantity>
+              </td>
+              <td>164,50 zł</td>
+              <td className="trashIcon">
+                <FaIcons.FaTrashAlt />
+              </td>
+            </BasketProduct>
+            <BasketProduct>
+              <td>
+                <Link to="/products/jakisprodukt">
+                  <img src={foto} alt="" />
                 </Link>
               </td>
               <td>
