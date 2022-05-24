@@ -1,5 +1,6 @@
 import * as RiIcons from 'react-icons/ri';
 import * as GiIcons from 'react-icons/gi';
+import foto from 'assets/images/3.png';
 
 import foto1 from 'assets/images/1.png';
 import foto2 from 'assets/images/2.png';
@@ -161,3 +162,46 @@ export const testProducts = [
 ];
 
 export const dummyData = ['S', 'M', 'L', 'XL', 'XXL'];
+
+export const testBasketProducts = [
+  {
+    foto: foto,
+    size: 'XL',
+    color: 'Biały',
+    gid: 298319,
+    name: 'T-Shirt miami palm men white',
+    price: 164.5,
+  },
+  {
+    foto: foto,
+    size: 'XL',
+    color: 'Biały',
+    gid: 298319,
+    name: 'T-Shirt miami palm men white',
+    price: 164.5,
+  },
+  {
+    foto: foto,
+    size: 'XL',
+    color: 'Biały',
+    gid: 298319,
+    name: 'T-Shirt miami palm men white',
+    price: 164.5,
+  },
+  {
+    foto: foto,
+    size: 'XL',
+    color: 'Biały',
+    gid: 298319,
+    name: 'T-Shirt miami palm men white',
+    price: 164.5,
+  },
+  {
+    foto: foto,
+    size: 'XL',
+    color: 'Biały',
+    gid: 298319,
+    name: 'T-Shirt miami palm men white',
+    price: 164.5,
+  },
+];
