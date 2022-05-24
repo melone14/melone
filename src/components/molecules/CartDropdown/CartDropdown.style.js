@@ -3,11 +3,17 @@ import styled from 'styled-components';
 export const Wrapper = styled.div`
   width: 400px;
   height: 530px;
-  border: 2px solid black;
+  border: 1px solid black;
   background: white;
   position: absolute;
   top: 40px;
   right: -200px;
+
+  @media (max-width: 1000px) {
+    right: -62px;
+    top: 70px;
+    width: 350px;
+  }
 `;
 
 export const ProductsWrapper = styled.div`

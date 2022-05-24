@@ -94,10 +94,10 @@ const Navigation = () => {
               <FiIcons.FiShoppingBag />
               <CartDropdown />
             </StyledLink>
-            <StyledLink to="/ulubione">
+            <StyledLink to="/ulubione" className="heartIcon">
               <FiIcons.FiHeart />
             </StyledLink>
-            <StyledLink to="/login">
+            <StyledLink to="/login" className="userIcon">
               <FiIcons.FiUser />
             </StyledLink>
           </NavIconsWrapper>

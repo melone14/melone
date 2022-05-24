@@ -17,6 +17,11 @@ export const NavigationWrapper = styled.nav`
   transition: all 0.5s ease-in-out;
   z-index: 10;
 
+  .heartIcon,
+  .userIcon {
+    display: none;
+  }
+
   &.active {
     background: rgba(255, 255, 255, 0.95);
   }
@@ -25,6 +30,11 @@ export const NavigationWrapper = styled.nav`
     height: 80px;
     display: grid;
     grid-template-columns: 2fr 1fr 2fr;
+
+    .heartIcon,
+    .userIcon {
+      display: block;
+    }
   }
 
   @media (min-width: 1250px) {
