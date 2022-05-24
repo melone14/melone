@@ -38,6 +38,8 @@ const BasketProduct = styled.tr`
   td {
     display: flex;
     align-items: center;
+
+    font-size: 15px;
   }
 
   td img {
@@ -53,6 +55,21 @@ const BasketProduct = styled.tr`
 
   td.trashIcon svg:hover {
     color: ${({ theme }) => theme.colors.darkGrey};
+  }
+
+  @media (max-width: 1000px) {
+    height: 170px;
+    grid-template-columns: 80px 70px 60px 70px 70px 50px;
+
+    td img {
+      width: 80px;
+      height: 85px;
+    }
+
+    td {
+      justify-content: center;
+      font-size: 13px;
+    }
   }
 `;
 
@@ -72,12 +89,20 @@ const ProductName = styled.h1`
       color: ${({ theme }) => theme.colors.darkGrey};
     }
   }
+
+  @media (max-width: 1000px) {
+    font-size: 11px;
+  }
 `;
 
 const ProductDetails = styled.h3`
   font-size: 14px;
   font-weight: 400;
   line-height: 1.6;
+
+  @media (max-width: 1000px) {
+    font-size: 10px;
+  }
 `;
 
 const Quantity = styled.div`
@@ -103,6 +128,17 @@ const Quantity = styled.div`
       background: ${({ theme }) => theme.colors.lightGrey};
     }
   }
+
+  @media (max-width: 1000px) {
+    width: 100%;
+    justify-content: space-evenly;
+    font-size: 12px;
+
+    button {
+      width: 14px;
+      height: 14px;
+    }
+  }
 `;
 
 const TableBody = styled.tbody``;
@@ -118,6 +154,12 @@ const TableHead = styled.thead`
   th {
     font-weight: 300;
     font-size: 12px;
+  }
+
+  @media (max-width: 1000px) {
+    tr {
+      grid-template-columns: 80px 70px 60px 70px 70px 50px;
+    }
   }
 `;
 
