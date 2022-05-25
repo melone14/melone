@@ -195,7 +195,6 @@ export const StyledLink = styled(NavLink)`
   &:hover {
     color: ${({ theme }) => theme.colors.grey};
     border-bottom: 1px solid ${({ theme }) => theme.colors.grey};
-    padding-bottom: 10px;
 
     .dropdown {
       display: block;

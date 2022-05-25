@@ -9,17 +9,14 @@ export const Wrapper = styled.div`
   top: 40px;
   right: -200px;
 
-  @media (max-width: 1000px) {
-    right: -62px;
-    top: 70px;
-    width: 350px;
+  @media (max-width: 1100px) {
+    display: none !important;
   }
 `;
 
 export const ProductsWrapper = styled.div`
   height: 450px;
   overflow-y: scroll;
-  /* padding-bottom: 10px; */
 `;
 
 export const Button = styled.button`
