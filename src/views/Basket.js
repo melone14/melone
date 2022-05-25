@@ -126,7 +126,7 @@ const Basket = () => {
           </TableHead>
           <TableBody>
             {testBasketProducts.map((product) => (
-              <BasketItem product={product} />
+              <BasketItem product={product} key={product.gid} />
             ))}
           </TableBody>
         </ProductsWrapper>
