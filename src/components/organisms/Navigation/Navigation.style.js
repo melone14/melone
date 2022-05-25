@@ -55,7 +55,7 @@ export const HamburgerBtn = styled(FiIcons.FiMenu)`
   cursor: pointer;
   display: block;
 
-  @media (min-width: 1250px) {
+  @media (min-width: 1100px) {
     display: none;
   }
 `;
@@ -101,7 +101,7 @@ export const NavListItem = styled.li`
   font-size: 14px;
   margin-right: 25px;
 
-  @media (max-width: 700px) {
+  @media (max-width: 1100px) {
     display: none;
   }
 `;
@@ -156,10 +156,6 @@ export const SearchBarWrapper = styled.div`
     opacity: 1;
     left: 0;
   }
-
-  @media (max-width: 700px) {
-    /* display: none; */
-  }
 `;
 
 export const SearchBarInput = styled.input`
@@ -176,7 +172,7 @@ export const SearchBarInput = styled.input`
     color: ${({ theme }) => theme.colors.grey};
   }
 
-  @media (max-width: 700px) {
+  @media (max-width: 1100px) {
     display: none;
   }
 `;
@@ -227,5 +223,33 @@ export const StyledLink = styled(NavLink)`
     top: -6px;
     right: 4px;
     z-index: 4;
+  }
+`;
+
+export const MobileMenu = styled.nav`
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80vw;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.95);
+`;
+
+export const MobileLinksWrapper = styled.ul`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100vh;
+
+  li {
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  li a:hover {
+    color: inherit;
+    border-bottom: none;
   }
 `;

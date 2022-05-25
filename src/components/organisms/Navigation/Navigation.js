@@ -8,6 +8,8 @@ import {
   SearchBarWrapper,
   StyledLink,
   HamburgerBtn,
+  MobileMenu,
+  MobileLinksWrapper,
 } from './Navigation.style';
 import { useEffect, useState, useContext } from 'react';
 import logo from 'assets/images/logo.png';
@@ -102,6 +104,19 @@ const Navigation = () => {
             </StyledLink>
           </NavIconsWrapper>
         </SearchBarWrapper>
+        <MobileMenu>
+          <MobileLinksWrapper>
+            <li>
+              <StyledLink to="/kobiety">KOBIETY</StyledLink>
+            </li>
+            <li>
+              <StyledLink to="/mezczyzni">MĘŻCZYŹNI</StyledLink>
+            </li>
+            <li>
+              <StyledLink to="/wyprzedaz">WYPRZEDAŻ</StyledLink>
+            </li>
+          </MobileLinksWrapper>
+        </MobileMenu>
       </NavigationWrapper>
     </header>
   );
