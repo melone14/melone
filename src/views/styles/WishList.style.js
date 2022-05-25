@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { StyledRemoveButton } from 'components/atoms/RemoveButton/RemoveButton.style';
 
 export const Wrapper = styled.main`
   width: 100%;
@@ -39,29 +40,6 @@ export const StyledImage = styled.img`
   width: 100%;
   height: 300px;
   /* border-bottom: 1px solid red; */
-`;
-
-export const StyledRemoveButton = styled.button`
-  width: 48px;
-  height: 48px;
-  position: absolute;
-  top: 10px;
-  right: 0;
-  background: #f2f2f2;
-  outline: none;
-  border: none;
-  font-size: 27px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  transition: all 0.3s;
-  color: ${({ theme }) => theme.colors.black};
-
-  &:hover {
-    color: white;
-    background: ${({ theme }) => theme.colors.grey};
-  }
 `;
 
 export const BasketButton = styled(StyledRemoveButton)`

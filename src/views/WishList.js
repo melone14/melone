@@ -10,12 +10,12 @@ import {
   ProductsWrapper,
   ProductWrapper,
   StyledImage,
-  StyledRemoveButton,
   BasketButton,
   ProductName,
   ProductPrice,
   ProductSize,
 } from './styles/WishList.style';
+import RemoveButton from 'components/atoms/RemoveButton/RemoveButton';
 
 const WishList = () => {
   return (
@@ -28,9 +28,9 @@ const WishList = () => {
           {testBasketProducts.map(({ name, price, foto, size }) => (
             <Link to="/">
               <ProductWrapper>
-                <StyledRemoveButton>
+                <RemoveButton>
                   <CgIcons.CgClose />
-                </StyledRemoveButton>
+                </RemoveButton>
                 <StyledImage src={foto} alt="" />
                 <BasketButton>
                   <FiIcons.FiShoppingBag />

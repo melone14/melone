@@ -8,8 +8,6 @@ import {
   SearchBarWrapper,
   StyledLink,
   HamburgerBtn,
-  MobileMenu,
-  MobileLinksWrapper,
 } from './Navigation.style';
 import { useEffect, useState, useContext } from 'react';
 import logo from 'assets/images/logo.png';
@@ -18,9 +16,11 @@ import { cartContext } from 'context/cartContext';
 
 import * as FiIcons from 'react-icons/fi';
 import CartDropdown from 'components/molecules/CartDropdown/CartDropdown';
+import MobileMenu from 'components/molecules/MobileMenu/MobileMenu';
 
 const Navigation = () => {
   const [navbarScroll, setNavbarScroll] = useState(false);
+  const [isVisibleMobileMenu, setMobileMEnu] = useState(false);
   const { pathname } = useLocation();
   const { products } = useContext(cartContext);
 
@@ -104,19 +104,7 @@ const Navigation = () => {
             </StyledLink>
           </NavIconsWrapper>
         </SearchBarWrapper>
-        <MobileMenu>
-          <MobileLinksWrapper>
-            <li>
-              <StyledLink to="/kobiety">KOBIETY</StyledLink>
-            </li>
-            <li>
-              <StyledLink to="/mezczyzni">MĘŻCZYŹNI</StyledLink>
-            </li>
-            <li>
-              <StyledLink to="/wyprzedaz">WYPRZEDAŻ</StyledLink>
-            </li>
-          </MobileLinksWrapper>
-        </MobileMenu>
+        <MobileMenu visible={isVisibleMobileMenu} />
       </NavigationWrapper>
     </header>
   );
