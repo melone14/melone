@@ -47,7 +47,7 @@ export const StyledRemoveButton = styled.button`
   position: absolute;
   top: 10px;
   right: 0;
-  background: white;
+  background: #f2f2f2;
   outline: none;
   border: none;
   font-size: 27px;
@@ -55,7 +55,13 @@ export const StyledRemoveButton = styled.button`
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  transition: all 0.3s;
   color: ${({ theme }) => theme.colors.black};
+
+  &:hover {
+    color: white;
+    background: ${({ theme }) => theme.colors.grey};
+  }
 `;
 
 export const BasketButton = styled(StyledRemoveButton)`
@@ -64,12 +70,15 @@ export const BasketButton = styled(StyledRemoveButton)`
   bottom: 128px;
   color: white;
   font-size: 23px;
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.black};
+  }
 `;
 
 export const ProductName = styled.h1`
   padding: 15px 0;
   height: 60px;
-  /* border: 1px solid red; */
   font-size: 15px;
   font-weight: 500;
 `;
