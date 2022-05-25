@@ -5,7 +5,7 @@ import { StyledLink } from 'components/organisms/Navigation/Navigation.style';
 const MobileMenu = ({ visible, handler }) => {
   return (
     <Wrapper visible={visible} onClick={handler}>
-      <MobileWrapper>
+      <MobileWrapper visible={visible}>
         <SectionTitle center>Menu</SectionTitle>
         <MobileLinksWrapper className="mobileList">
           <li>

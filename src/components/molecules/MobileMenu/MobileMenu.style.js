@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-  display: ${({ visible }) => (visible ? 'block' : 'none')};
-  position: fixed;
+  position: absolute;
+  left: ${({ visible }) => (visible ? '0' : '-100%')};
+  opacity: ${({ visible }) => (visible ? '1' : '0')};
   width: 100vw;
   height: 100vh;
   background: rgba(0, 0, 0, 0.35);
@@ -17,6 +18,9 @@ export const MobileWrapper = styled.nav`
   width: 80vw;
   height: 100vh;
   background: rgb(252, 252, 252);
+  transition: all 0.2s;
+  opacity: ${({ visible }) => (visible ? '1' : '0')};
+  left: ${({ visible }) => (visible ? '0' : '-100%')};
 `;
 
 export const MobileLinksWrapper = styled.ul`
