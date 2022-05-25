@@ -1,13 +1,22 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled.nav`
+export const Wrapper = styled.div`
+  display: ${({ visible }) => (visible ? 'block' : 'none')};
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 5;
+`;
+
+export const MobileWrapper = styled.nav`
   display: block;
   position: absolute;
   top: 0;
   left: 0;
   width: 80vw;
   height: 100vh;
-  background: rgba(255, 255, 255, 0.95);
+  background: rgb(252, 252, 252);
 `;
 
 export const MobileLinksWrapper = styled.ul`

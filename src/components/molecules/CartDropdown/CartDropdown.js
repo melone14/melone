@@ -10,7 +10,7 @@ const CartDropdown = () => {
     <Wrapper className="dropdown">
       <ProductsWrapper>
         {products.map((product) => (
-          <DropdownItem product={product} />
+          <DropdownItem product={product} key={product.gid} />
         ))}
       </ProductsWrapper>
       <Button>Koszyk</Button>

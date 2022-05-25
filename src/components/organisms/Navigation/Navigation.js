@@ -32,6 +32,13 @@ const Navigation = () => {
     }
   };
 
+  const handleHamburgerClick = (e) => {
+    if (e.target.classList.contains('mobileList')) {
+      return;
+    }
+    setMobileMEnu((prevState) => !prevState);
+  };
+
   useEffect(() => {
     window.addEventListener('scroll', handleNavbarScroll);
 
@@ -67,7 +74,7 @@ const Navigation = () => {
           <NavListItem>
             <StyledLink to="/wyprzedaz">WYPRZEDAŻ</StyledLink>
           </NavListItem>
-          <HamburgerBtn />
+          <HamburgerBtn onClick={handleHamburgerClick} />
         </NavList>
         <Link to="/">
           <Logo src={logo} />
@@ -104,7 +111,10 @@ const Navigation = () => {
             </StyledLink>
           </NavIconsWrapper>
         </SearchBarWrapper>
-        <MobileMenu visible={isVisibleMobileMenu} />
+        <MobileMenu
+          visible={isVisibleMobileMenu}
+          handler={handleHamburgerClick}
+        />
       </NavigationWrapper>
     </header>
   );
