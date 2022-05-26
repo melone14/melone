@@ -27,10 +27,10 @@ const MobileMenu = ({ visible, handler }) => {
             <StyledLink to="/wyprzedaz">WYPRZEDAŻ</StyledLink>
           </li>
           <li>
-            <StyledLink to="/wyprzedaz">ULUBIONE</StyledLink>
+            <StyledLink to="/ulubione">ULUBIONE</StyledLink>
           </li>
           <li>
-            <StyledLink to="/wyprzedaz">ZALOGUJ</StyledLink>
+            <StyledLink to="/login">ZALOGUJ</StyledLink>
           </li>
         </MobileLinksWrapper>
       </MobileWrapper>

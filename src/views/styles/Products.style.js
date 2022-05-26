@@ -8,7 +8,11 @@ export const Wrapper = styled.section`
   max-width: 1500px;
   margin: 0 auto;
   grid-template-columns: 320px 30fr 1fr;
-  /* border: 1px solid red; */
+
+  @media (max-width: 1100px) {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 export const FiltersWrapper = styled.aside`
@@ -16,16 +20,11 @@ export const FiltersWrapper = styled.aside`
   /* border: 1px solid red; */
   height: 600px;
   padding: 20px 40px;
-`;
 
-export const ProductsWrapper = styled.section`
-  min-height: 700px;
-  /* border: 1px solid green; */
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 30px;
-  padding-left: 20px;
-  padding-bottom: 30px;
+  @media (max-width: 1100px) {
+    height: unset;
+    margin: 10px auto;
+  }
 `;
 
 export const Text = styled.h1`
@@ -35,8 +34,13 @@ export const Text = styled.h1`
 `;
 
 export const CategoriesWrapper = styled.ul`
-  /* border: 2px solid red; */
   list-style: none;
+
+  @media (max-width: 1100px) {
+    li {
+      margin: 10px 0;
+    }
+  }
 `;
 
 export const CategoryLink = styled(Link)`
@@ -44,7 +48,6 @@ export const CategoryLink = styled(Link)`
   text-decoration: none;
   margin: 8px 0 4px 0;
   display: flex;
-  /* border: 1px solid green; */
   height: 22px;
   justify-content: flex-start;
   align-items: center;
@@ -57,6 +60,9 @@ export const CategoryLink = styled(Link)`
   span {
     padding-left: 5px;
     padding-right: 4px;
+  }
+
+  @media (max-width: 1100px) {
   }
 `;
 

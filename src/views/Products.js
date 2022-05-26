@@ -1,9 +1,8 @@
 import { useState } from 'react';
-import ProductCard from 'components/molecules/ProductCard/ProductCard';
-import { categoriesData, testProducts } from 'data';
+import { categoriesData } from 'data';
+import DisplayProducts from 'components/organisms/DisplayProducts/DisplayProducts';
 import MenuNavigation from 'components/molecules/MenuNavigation/MenuNavigation';
 import {
-  ProductsWrapper,
   FiltersWrapper,
   Wrapper,
   SubCategoryLink,
@@ -11,16 +10,6 @@ import {
   CategoriesWrapper,
   CategoryLink,
 } from './styles/Products.style';
-
-const DisplayProduct = () => {
-  return (
-    <ProductsWrapper>
-      {testProducts.map((product) => (
-        <ProductCard slider="yes" product={product} key={product.gid} />
-      ))}
-    </ProductsWrapper>
-  );
-};
 
 const Products = () => {
   const [subnav, setSubnav] = useState(false);
@@ -35,7 +24,7 @@ const Products = () => {
           <Text>Kategorie</Text>
           <CategoriesWrapper>
             {categoriesData.map((category, index) => (
-              <div key={index}>
+              <li key={index}>
                 <CategoryLink to={category.path} onClick={handleCateogryClick}>
                   {category.icon}
                   <span>{category.title}</span>
@@ -47,7 +36,7 @@ const Products = () => {
                       {item.title}
                     </SubCategoryLink>
                   ))}
-              </div>
+              </li>
             ))}
           </CategoriesWrapper>
           <Text>Cena</Text>
@@ -56,7 +45,7 @@ const Products = () => {
           <Text>Rozmiar</Text>
         </FiltersWrapper>
 
-        <DisplayProduct />
+        <DisplayProducts />
       </Wrapper>
     </>
   );
