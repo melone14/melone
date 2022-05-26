@@ -16,15 +16,39 @@ const Wrapper = styled.main`
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 290px;
+
+  @media (max-width: 1100px) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
 `;
 
 const ProductsWrapper = styled.table`
   padding-right: 100px;
   width: 100%;
   text-align: left;
+
+  @media (max-width: 1100px) {
+    width: 95%;
+    max-width: 650px;
+    margin: 0 auto;
+    padding-right: unset;
+  }
 `;
 
-const TableBody = styled.tbody``;
+const TableBody = styled.tbody`
+  @media (max-width: 1100px) {
+    tr {
+      grid-template-columns: 140px 150px 90px 73px 90px 101px;
+    }
+  }
+
+  @media (max-width: 700px) {
+    tr {
+      grid-template-columns: 80px 70px 60px 70px 70px 50px;
+    }
+  }
+`;
 
 const TableHead = styled.thead`
   tr {
@@ -37,9 +61,15 @@ const TableHead = styled.thead`
     font-size: 12px;
   }
 
-  @media (max-width: 1000px) {
+  @media (max-width: 1100px) {
     tr {
-      grid-template-columns: 80px 70px 60px 70px 70px 50px;
+      grid-template-columns: 140px 169px 78px 87px 73px 97px;
+    }
+  }
+
+  @media (max-width: 700px) {
+    tr {
+      grid-template-columns: 80px 78px 64px 68px 70px 50px;
     }
   }
 `;
@@ -50,7 +80,6 @@ const Order = styled.div`
   border: 1px solid ${({ theme }) => theme.colors.darkGrey};
   padding: 10px;
   position: sticky;
-
   top: 50px;
 
   h1 {
@@ -96,6 +125,12 @@ const Order = styled.div`
       color: ${({ theme }) => theme.colors.black};
     }
   }
+
+  @media (max-width: 1100px) {
+    width: 90%;
+    max-width: 450px;
+    margin: 0 auto;
+  }
 `;
 
 const InfosWrapper = styled.div`
@@ -105,6 +140,11 @@ const InfosWrapper = styled.div`
   padding-left: 40px;
   margin-top: 50px;
   justify-content: space-around;
+
+  @media (max-width: 1100px) {
+    width: 400px;
+    margin: 55px auto;
+  }
 `;
 
 const Basket = () => {
