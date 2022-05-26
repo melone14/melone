@@ -207,7 +207,7 @@ export const StyledLink = styled(NavLink)`
     width: 16px;
     height: 16px;
     border-radius: 50%;
-    background: red;
+    background: #ff444f;
     position: absolute;
     top: -8px;
     right: -1px;
