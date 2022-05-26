@@ -1,10 +1,8 @@
 import { useState } from 'react';
 import ProductCard from 'components/molecules/ProductCard/ProductCard';
-import { useLocation } from 'react-router-dom';
 import { categoriesData, testProducts } from 'data';
+import MenuNavigation from 'components/molecules/MenuNavigation/MenuNavigation';
 import {
-  MenuNavigationWrapper,
-  MenuNavigationLink,
   ProductsWrapper,
   FiltersWrapper,
   Wrapper,
@@ -13,33 +11,6 @@ import {
   CategoriesWrapper,
   CategoryLink,
 } from './styles/Products.style';
-
-const MenuNavigation = () => {
-  const { pathname } = useLocation();
-  const url = pathname.split('/');
-
-  return (
-    <MenuNavigationWrapper>
-      <MenuNavigationLink to="/">Strona główna</MenuNavigationLink>
-      {' / '}
-      <MenuNavigationLink to={`/${url[1]}`}>
-        {url[1] === 'mezczyzni'
-          ? 'mężczyźni'
-          : url[1] === 'wyprzedaz'
-          ? 'wyprzedaż'
-          : `${url[1]}`}
-      </MenuNavigationLink>
-      {url.length > 2 ? (
-        <>
-          {' / '}{' '}
-          <MenuNavigationLink
-            to={`/${url[1]}/${url[2]}`}
-          >{`${url[2]}`}</MenuNavigationLink>{' '}
-        </>
-      ) : null}
-    </MenuNavigationWrapper>
-  );
-};
 
 const DisplayProduct = () => {
   return (
