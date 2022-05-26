@@ -142,8 +142,9 @@ const InfosWrapper = styled.div`
   justify-content: space-around;
 
   @media (max-width: 1100px) {
-    width: 400px;
+    width: 215px;
     margin: 55px auto;
+    padding: 0;
   }
 `;
 
