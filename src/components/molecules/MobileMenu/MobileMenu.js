@@ -1,12 +1,21 @@
-import { MobileWrapper, MobileLinksWrapper, Wrapper } from './MobileMenu.style';
-import SectionTitle from 'components/atoms/SectionTitle/SectionTitle';
+import {
+  MobileWrapper,
+  MobileLinksWrapper,
+  Wrapper,
+  MobileHeader,
+  CloseButton,
+} from './MobileMenu.style';
+import * as CgIcons from 'react-icons/cg';
 import { StyledLink } from 'components/organisms/Navigation/Navigation.style';
 
 const MobileMenu = ({ visible, handler }) => {
   return (
     <Wrapper visible={visible} onClick={handler}>
       <MobileWrapper visible={visible}>
-        <SectionTitle center>Menu</SectionTitle>
+        <CloseButton>
+          <CgIcons.CgClose />
+        </CloseButton>
+        <MobileHeader>MENU</MobileHeader>
         <MobileLinksWrapper className="mobileList">
           <li>
             <StyledLink to="/kobiety">KOBIETY</StyledLink>
@@ -16,6 +25,12 @@ const MobileMenu = ({ visible, handler }) => {
           </li>
           <li>
             <StyledLink to="/wyprzedaz">WYPRZEDAŻ</StyledLink>
+          </li>
+          <li>
+            <StyledLink to="/wyprzedaz">ULUBIONE</StyledLink>
+          </li>
+          <li>
+            <StyledLink to="/wyprzedaz">ZALOGUJ</StyledLink>
           </li>
         </MobileLinksWrapper>
       </MobileWrapper>

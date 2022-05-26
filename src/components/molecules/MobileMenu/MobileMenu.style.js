@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { StyledRemoveButton } from 'components/atoms/RemoveButton/RemoveButton.style';
 
 export const Wrapper = styled.div`
   position: absolute;
@@ -39,4 +40,15 @@ export const MobileLinksWrapper = styled.ul`
     color: inherit;
     border-bottom: none;
   }
+`;
+
+export const MobileHeader = styled.h1`
+  padding: 50px 0;
+  text-align: center;
+  font-size: 25px;
+  letter-spacing: 1.2;
+`;
+
+export const CloseButton = styled(StyledRemoveButton)`
+  right: 10px;
 `;
