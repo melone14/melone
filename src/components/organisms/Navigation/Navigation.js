@@ -8,6 +8,7 @@ import {
   SearchBarWrapper,
   StyledLink,
   HamburgerBtn,
+  CartCounter,
 } from './Navigation.style';
 import { useEffect, useState, useContext } from 'react';
 import logo from 'assets/images/logo.png';
@@ -99,7 +100,9 @@ const Navigation = () => {
             }
           >
             <StyledLink to="/koszyk" className="cartIcon">
-              <span>{products.length}</span>
+              <CartCounter>
+                <span>{products.length}</span>
+              </CartCounter>
               <FiIcons.FiShoppingBag />
               <CartDropdown />
             </StyledLink>

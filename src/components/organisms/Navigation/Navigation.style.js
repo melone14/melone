@@ -201,21 +201,7 @@ export const StyledLink = styled(NavLink)`
     }
   }
 
-  &.cartIcon::after {
-    content: '';
-    display: block;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    background: #ff444f;
-    position: absolute;
-    top: -8px;
-    right: -1px;
-    z-index: 2;
-  }
-
   span {
-    position: absolute;
     font-size: 11px;
     color: white;
     font-weight: bold;
@@ -251,4 +237,18 @@ export const MobileLinksWrapper = styled.ul`
     color: inherit;
     border-bottom: none;
   }
+`;
+
+export const CartCounter = styled.div`
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #ff444f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -8px;
+  right: -1px;
+  z-index: 2;
 `;
