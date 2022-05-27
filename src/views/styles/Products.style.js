@@ -12,6 +12,7 @@ export const Wrapper = styled.section`
   @media (max-width: 1100px) {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
   }
 `;
 
