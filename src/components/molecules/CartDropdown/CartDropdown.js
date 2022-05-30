@@ -5,11 +5,11 @@ import { cartContext } from 'context/cartContext';
 import DropdownItem from 'components/atoms/DropdownItem/DropdownItem';
 
 const CartDropdown = () => {
-  const { products } = useContext(cartContext);
+  const { cartProducts } = useContext(cartContext);
   return (
     <Wrapper className="dropdown">
       <ProductsWrapper>
-        {products.map((product) => (
+        {cartProducts.map((product) => (
           <DropdownItem product={product} key={product.gid} />
         ))}
       </ProductsWrapper>

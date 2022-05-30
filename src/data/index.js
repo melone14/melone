@@ -204,3 +204,12 @@ export const testBasketProducts = [
     price: 164.5,
   },
 ];
+
+export const testOneProduct = {
+  image: foto2,
+  size: 'XL',
+  color: 'Biały',
+  gid: 298219,
+  name: 'T-Shirt miami palm men white',
+  price: 164.5,
+};

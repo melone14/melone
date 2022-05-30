@@ -1,5 +1,7 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
+import { cartContext } from 'context/cartContext';
 import { dummyData } from 'data';
+import { testOneProduct } from 'data';
 
 import foto6 from 'assets/images/6.jpeg';
 import foto7 from 'assets/images/7.jpeg';
@@ -12,7 +14,6 @@ import ShoppingInfo from 'components/molecules/ShoppingInfo/ShoppingInfo';
 import SectionTitle from 'components/atoms/SectionTitle/SectionTitle';
 import Carousel from 'components/organisms/Carousel/Carousel';
 import Sizes from 'components/molecules/Sizes/Sizes';
-
 import {
   Wrapper,
   ImageGalery,
@@ -35,6 +36,7 @@ const ProductCart = () => {
 
   const [heart, setHeart] = useState(false);
   const [activeImage, setActiveImage] = useState(activeImg);
+  const { addProductToCart } = useContext(cartContext);
 
   const handleHeartClick = () => setHeart(!heart);
 
@@ -90,7 +92,11 @@ const ProductCart = () => {
           </ProductSizeWrapper>
           <Sizes sizes={dummyData} />
           <ButtonsWrapper>
-            <AddToCartBtn type="submit" value="Dodaj do koszyka" />
+            <AddToCartBtn
+              type="submit"
+              value="Dodaj do koszyka"
+              onClick={() => addProductToCart(testOneProduct)}
+            />
             <WishListBtn onClick={handleHeartClick}>
               {heart ? (
                 <FaIcons.FaHeart style={{ color: '#ce3535' }} />

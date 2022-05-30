@@ -23,7 +23,7 @@ const Navigation = () => {
   const [navbarScroll, setNavbarScroll] = useState(false);
   const [isVisibleMobileMenu, setMobileMEnu] = useState(false);
   const { pathname } = useLocation();
-  const { products } = useContext(cartContext);
+  const { cartProducts } = useContext(cartContext);
 
   const handleNavbarScroll = () => {
     if (window.scrollY >= 2) {
@@ -100,9 +100,11 @@ const Navigation = () => {
             }
           >
             <StyledLink to="/koszyk" className="cartIcon">
-              <CartCounter>
-                <span>{products.length}</span>
-              </CartCounter>
+              {cartProducts.length ? (
+                <CartCounter>
+                  <span>{cartProducts.length}</span>
+                </CartCounter>
+              ) : null}
               <FiIcons.FiShoppingBag />
               <CartDropdown />
             </StyledLink>
