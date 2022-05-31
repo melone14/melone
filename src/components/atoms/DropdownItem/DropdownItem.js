@@ -25,14 +25,21 @@ const Wrapper = styled.div`
 
   p {
     font-size: 17px;
+
+    span {
+      font-size: 11px;
+      color: inherit;
+    }
   }
 `;
 
-const DropdownItem = ({ product: { name, price, image } }) => (
+const DropdownItem = ({ product: { name, price, image, quantity } }) => (
   <Wrapper>
     <img src={image} alt={name} />
     <h1>{name}</h1>
-    <p>{price}</p>
+    <p>
+      <span>{quantity ? `${quantity} x` : '1 x'}</span> {price}
+    </p>
   </Wrapper>
 );
 
