@@ -24,7 +24,7 @@ const Root = () => (
             <Route path="/" element={<Home />} />
             <Route path="/kobiety/*" element={<Products />} />
             <Route path="/mezczyzni/*" element={<Products />} />
-            <Route path="/wyprzedaz" element={<Products />} />
+            <Route path="/wyprzedaz/*" element={<Products />} />
             <Route path="/products/:id" element={<ProductCart />} />
             <Route path="/login" element={<Login />} />
             <Route path="/koszyk" element={<Basket />} />
