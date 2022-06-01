@@ -1,5 +1,6 @@
 import { useState, useContext } from 'react';
 import { cartContext } from 'context/cartContext';
+import { wishListContext } from 'context/wishListContext';
 import { dummyData } from 'data';
 import { testOneProduct } from 'data';
 
@@ -34,13 +35,20 @@ const ProductCart = () => {
   const activeImg = foto5;
   const images = [foto9, foto7, foto8, foto6, foto5];
 
-  const [heart, setHeart] = useState(false);
   const [activeImage, setActiveImage] = useState(activeImg);
   const { addProductToCart } = useContext(cartContext);
+  const { addProductToWishList, wishListProducts } =
+    useContext(wishListContext);
 
-  const handleHeartClick = () => setHeart(!heart);
+  const handleHeartClick = () => {
+    addProductToWishList(wishListProducts, testOneProduct);
+  };
 
   const handleImageChange = (img) => setActiveImage(img);
+
+  const alreadyLiked = wishListProducts.find(
+    (product) => product.gid === testOneProduct.gid
+  );
 
   return (
     <>
@@ -98,7 +106,7 @@ const ProductCart = () => {
               onClick={() => addProductToCart(testOneProduct)}
             />
             <WishListBtn onClick={handleHeartClick}>
-              {heart ? (
+              {alreadyLiked ? (
                 <FaIcons.FaHeart style={{ color: '#ce3535' }} />
               ) : (
                 <FaIcons.FaRegHeart />

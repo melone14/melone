@@ -10,7 +10,7 @@ const addCartProduct = (cartItems, productToAdd) => {
   if (exisitngCartItem) {
     return cartItems.map((cartItem) =>
       cartItem.gid === productToAdd.gid
-        ? { ...cartItem, quantity: cartItem.quantity++ }
+        ? { ...cartItem, quantity: ++cartItem.quantity }
         : cartItem
     );
   }

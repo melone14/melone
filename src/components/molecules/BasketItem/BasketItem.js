@@ -8,12 +8,12 @@ import {
   Quantity,
 } from './BasketItem.style';
 
-const BasketItem = ({ product: { name, gid, color, size, price, foto } }) => {
+const BasketItem = ({ product: { name, gid, color, size, price, image } }) => {
   return (
     <Wrapper>
       <td>
         <Link to="/products/jakisprodukt">
-          <img src={foto} alt={name} />
+          <img src={image} alt={name} />
         </Link>
       </td>
       <td>

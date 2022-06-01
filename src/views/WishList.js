@@ -3,8 +3,6 @@ import * as CgIcons from 'react-icons/cg';
 import * as FiIcons from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 
-import { testBasketProducts } from 'data';
-
 import {
   Wrapper,
   ProductsWrapper,
@@ -16,8 +14,12 @@ import {
   ProductSize,
 } from './styles/WishList.style';
 import RemoveButton from 'components/atoms/RemoveButton/RemoveButton';
+import { useContext } from 'react';
+import { wishListContext } from 'context/wishListContext';
 
 const WishList = () => {
+  const { wishListProducts, removeProduct } = useContext(wishListContext);
+
   return (
     <>
       <SectionTitle withoutUnderline center>
@@ -25,13 +27,22 @@ const WishList = () => {
       </SectionTitle>
       <Wrapper>
         <ProductsWrapper>
-          {testBasketProducts.map(({ name, price, foto, size }) => (
-            <Link to="/">
+          {wishListProducts.map(({ name, price, image, size, gid }) => (
+            <Link to="/" key={gid}>
               <ProductWrapper>
-                <RemoveButton>
+                <RemoveButton
+                  onClick={
+                    (e) => {
+                      e.preventDefault();
+                      removeProduct(wishListProducts, { gid });
+                    }
+                    // (e) => console.log(e.target)
+                    // () => console.log('click')
+                  }
+                >
                   <CgIcons.CgClose />
                 </RemoveButton>
-                <StyledImage src={foto} alt="" />
+                <StyledImage src={image} alt="" />
                 <BasketButton>
                   <FiIcons.FiShoppingBag />
                 </BasketButton>

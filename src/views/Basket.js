@@ -7,8 +7,10 @@ import {
 import * as BsIcons from 'react-icons/bs';
 import deliveryIcon from 'assets/icons/deliveryIcon.svg';
 import returnIcon from 'assets/icons/returnIcon.svg';
-import { testBasketProducts } from 'data';
 import BasketItem from 'components/molecules/BasketItem/BasketItem';
+import { useContext } from 'react';
+import { cartContext } from 'context/cartContext';
+import { useEffect } from 'react';
 
 const Wrapper = styled.main`
   width: 95%;
@@ -149,6 +151,12 @@ const InfosWrapper = styled.div`
 `;
 
 const Basket = () => {
+  const { cartProducts } = useContext(cartContext);
+
+  useEffect(() => {
+    console.log(cartProducts);
+  }, []);
+
   return (
     <>
       <SectionTitle center withoutUnderline>
@@ -166,7 +174,7 @@ const Basket = () => {
             </tr>
           </TableHead>
           <TableBody>
-            {testBasketProducts.map((product) => (
+            {cartProducts.map((product) => (
               <BasketItem product={product} key={product.gid} />
             ))}
           </TableBody>

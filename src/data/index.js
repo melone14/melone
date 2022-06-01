@@ -164,7 +164,7 @@ export const dummyData = ['S', 'M', 'L', 'XL', 'XXL'];
 
 export const testBasketProducts = [
   {
-    foto: foto2,
+    image: foto2,
     size: 'XL',
     color: 'Biały',
     gid: 298219,
@@ -172,7 +172,7 @@ export const testBasketProducts = [
     price: 164.5,
   },
   {
-    foto: foto2,
+    image: foto2,
     size: 'XL',
     color: 'Biały',
     gid: 298319,
@@ -180,7 +180,7 @@ export const testBasketProducts = [
     price: 164.5,
   },
   {
-    foto: foto2,
+    image: foto2,
     size: 'XL',
     color: 'Biały',
     gid: 298119,
@@ -188,7 +188,7 @@ export const testBasketProducts = [
     price: 164.5,
   },
   {
-    foto: foto2,
+    image: foto2,
     size: 'XL',
     color: 'Biały',
     gid: 298349,
@@ -196,10 +196,18 @@ export const testBasketProducts = [
     price: 164.5,
   },
   {
-    foto: foto2,
+    image: foto2,
     size: 'XL',
     color: 'Biały',
-    gid: 298379,
+    gid: 198219,
+    name: 'T-Shirt miami palm men white',
+    price: 164.5,
+  },
+  {
+    image: foto2,
+    size: 'XL',
+    color: 'Biały',
+    gid: 228219,
     name: 'T-Shirt miami palm men white',
     price: 164.5,
   },
@@ -209,7 +217,7 @@ export const testOneProduct = {
   image: foto2,
   size: 'XL',
   color: 'Biały',
-  gid: 298219,
+  gid: 278219,
   name: 'T-Shirt miami palm men white',
   price: 164.5,
 };

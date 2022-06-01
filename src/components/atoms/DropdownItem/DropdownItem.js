@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
@@ -33,14 +34,16 @@ const Wrapper = styled.div`
   }
 `;
 
-const DropdownItem = ({ product: { name, price, image, quantity } }) => (
-  <Wrapper>
-    <img src={image} alt={name} />
-    <h1>{name}</h1>
-    <p>
-      <span>{quantity ? `${quantity} x` : '1 x'}</span> {price}
-    </p>
-  </Wrapper>
-);
+const DropdownItem = ({ product: { name, price, image, quantity } }) => {
+  return (
+    <Wrapper>
+      <img src={image} alt={name} />
+      <h1>{name}</h1>
+      <p>
+        <span>{quantity ? `${quantity} x` : '1 x'}</span> {price}
+      </p>
+    </Wrapper>
+  );
+};
 
 export default DropdownItem;
