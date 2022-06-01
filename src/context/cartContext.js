@@ -30,7 +30,18 @@ export const CartContextProvider = ({ children }) => {
     setCartProducts(addCartProduct(cartProducts, productToAdd));
   };
 
-  const value = { cartProducts, setCartProducts, addProductToCart };
+  const removeProductFromCart = (productToRemove) => {
+    setCartProducts(
+      cartProducts.filter((product) => product.gid !== productToRemove.gid)
+    );
+  };
+
+  const value = {
+    cartProducts,
+    setCartProducts,
+    addProductToCart,
+    removeProductFromCart,
+  };
 
   return <cartContext.Provider value={value}>{children}</cartContext.Provider>;
 };

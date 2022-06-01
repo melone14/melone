@@ -7,8 +7,12 @@ import {
   ProductDetails,
   Quantity,
 } from './BasketItem.style';
+import { useContext } from 'react';
+import { cartContext } from 'context/cartContext';
 
 const BasketItem = ({ product: { name, gid, color, size, price, image } }) => {
+  const { removeProductFromCart } = useContext(cartContext);
+
   return (
     <Wrapper>
       <td>
@@ -34,7 +38,12 @@ const BasketItem = ({ product: { name, gid, color, size, price, image } }) => {
       </td>
       <td>{price} zł</td>
       <td className="trashIcon">
-        <FaIcons.FaTrashAlt />
+        <FaIcons.FaTrashAlt
+          onClick={(e) => {
+            e.preventDefault();
+            removeProductFromCart({ gid });
+          }}
+        />
       </td>
     </Wrapper>
   );

@@ -31,14 +31,10 @@ const WishList = () => {
             <Link to="/" key={gid}>
               <ProductWrapper>
                 <RemoveButton
-                  onClick={
-                    (e) => {
-                      e.preventDefault();
-                      removeProduct(wishListProducts, { gid });
-                    }
-                    // (e) => console.log(e.target)
-                    // () => console.log('click')
-                  }
+                  onClick={(e) => {
+                    e.preventDefault();
+                    removeProduct(wishListProducts, { gid });
+                  }}
                 >
                   <CgIcons.CgClose />
                 </RemoveButton>
