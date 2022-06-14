@@ -7,9 +7,10 @@ const SectionTitle = ({ children, center, withoutUnderline }) => (
   </Title>
 );
 
-export default SectionTitle;
-
 SectionTitle.propTypes = {
   children: PropTypes.string.isRequired,
   center: PropTypes.bool,
+  withoutUnderline: PropTypes.bool,
 };
+
+export default SectionTitle;
