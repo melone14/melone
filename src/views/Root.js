@@ -1,6 +1,6 @@
-import { GlobalStyle } from 'assets/styles/GlobalStyle';
+import { GlobalStyle } from 'styles/GlobalStyle';
 import { ThemeProvider } from 'styled-components';
-import { theme } from 'assets/styles/theme';
+import { theme } from 'styles/theme';
 import Navigation from 'components/organisms/Navigation/Navigation';
 import MainTemplate from 'templates/MainTemplate/MainTemplate';
 import Home from 'views/Home';
