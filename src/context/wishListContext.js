@@ -3,8 +3,6 @@ import { createContext, useState } from 'react';
 import { testBasketProducts } from 'data';
 
 const toggleWishListProduct = (wishListProducts, productToadd) => {
-  // console.log(wishListProducts);
-  // console.log(productToadd);
   const arleadyLiked = wishListProducts.find(
     (product) => product.gid === productToadd.gid
   );

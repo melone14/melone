@@ -18,12 +18,14 @@ import { cartContext } from 'context/cartContext';
 import * as FiIcons from 'react-icons/fi';
 import CartDropdown from 'components/molecules/CartDropdown/CartDropdown';
 import MobileMenu from 'components/molecules/MobileMenu/MobileMenu';
+import { wishListContext } from 'context/wishListContext';
 
 const Navigation = () => {
   const [navbarScroll, setNavbarScroll] = useState(false);
   const [isVisibleMobileMenu, setMobileMEnu] = useState(false);
   const { pathname } = useLocation();
   const { cartProducts } = useContext(cartContext);
+  const { wishListProducts } = useContext(wishListContext);
 
   const handleNavbarScroll = () => {
     if (window.scrollY >= 2) {
@@ -109,6 +111,11 @@ const Navigation = () => {
               <CartDropdown />
             </StyledLink>
             <StyledLink to="/ulubione" className="heartIcon">
+              {wishListProducts.length ? (
+                <CartCounter>
+                  <span>{wishListProducts.length}</span>
+                </CartCounter>
+              ) : null}
               <FiIcons.FiHeart />
             </StyledLink>
             <StyledLink to="/login" className="userIcon">
