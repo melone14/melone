@@ -30,6 +30,7 @@ import {
   InfoWrapper,
   WishListBtn,
 } from './styles/ProductCart.style';
+import { useSnackbar } from 'notistack';
 
 const ProductCart = () => {
   const activeImg = foto5;
@@ -39,6 +40,7 @@ const ProductCart = () => {
   const { addProductToCart } = useContext(cartContext);
   const { addProductToWishList, wishListProducts } =
     useContext(wishListContext);
+  const { enqueueSnackbar, closeSnackbar } = useSnackbar();
 
   const handleHeartClick = () => {
     addProductToWishList(wishListProducts, testOneProduct);
@@ -103,7 +105,10 @@ const ProductCart = () => {
             <AddToCartBtn
               type="submit"
               value="Dodaj do koszyka"
-              onClick={() => addProductToCart(testOneProduct)}
+              onClick={() => {
+                addProductToCart(testOneProduct);
+                enqueueSnackbar('I love hooks');
+              }}
             />
             <WishListBtn onClick={handleHeartClick}>
               {alreadyLiked ? (
