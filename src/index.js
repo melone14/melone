@@ -11,6 +11,7 @@ ReactDOM.render(
       <SnackbarProvider
         autoHideDuration={3000}
         dense
+        disableWindowBlurListener
         maxSnack={5}
         anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
       >

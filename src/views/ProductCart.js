@@ -40,7 +40,7 @@ const ProductCart = () => {
   const { addProductToCart } = useContext(cartContext);
   const { addProductToWishList, wishListProducts } =
     useContext(wishListContext);
-  const { enqueueSnackbar, closeSnackbar } = useSnackbar();
+  const { enqueueSnackbar } = useSnackbar();
 
   const handleHeartClick = () => {
     addProductToWishList(wishListProducts, testOneProduct);
@@ -58,35 +58,35 @@ const ProductCart = () => {
         <ImageGalery>
           <SmallImagesWrapper>
             <SmallImage
-              img={images[0]}
+              src={images[0]}
               onClick={() => handleImageChange(images[0])}
             />
             <SmallImage
-              img={images[1]}
+              src={images[1]}
               onClick={() => handleImageChange(images[1])}
             />
             <SmallImage
-              img={images[2]}
+              src={images[2]}
               onClick={() => handleImageChange(images[2])}
             />
             <SmallImage
-              img={images[3]}
+              src={images[3]}
               onClick={() => handleImageChange(images[3])}
             />
             <SmallImage
-              img={images[4]}
+              src={images[4]}
               onClick={() => handleImageChange(images[4])}
             />
             <SmallImage
-              img={images[2]}
+              src={images[2]}
               onClick={() => handleImageChange(images[2])}
             />
             <SmallImage
-              img={images[3]}
+              src={images[3]}
               onClick={() => handleImageChange(images[3])}
             />
             <SmallImage
-              img={images[4]}
+              src={images[4]}
               onClick={() => handleImageChange(images[4])}
             />
           </SmallImagesWrapper>
@@ -107,7 +107,9 @@ const ProductCart = () => {
               value="Dodaj do koszyka"
               onClick={() => {
                 addProductToCart(testOneProduct);
-                enqueueSnackbar('I love hooks');
+                enqueueSnackbar('Dodano do koszyka', {
+                  variant: 'success',
+                });
               }}
             />
             <WishListBtn onClick={handleHeartClick}>

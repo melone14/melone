@@ -9,31 +9,35 @@ export const Wrapper = styled.section`
   justify-content: space-between;
 
   @media (max-width: 1250px) {
-    border: 2px solid green;
+    border: 2px solid red;
     flex-direction: column;
     align-items: center;
+    padding-top: 0;
   }
 `;
 
 export const ImageGalery = styled.div`
   width: 60%;
-  max-width: 600px;
+  max-width: 650px;
   display: flex;
   align-items: center;
   height: 636px;
 
   @media (max-width: 1250px) {
-    border: 2px solid green;
-    width: 90%;
+    border: 2px solid blue;
+    width: 94%;
     max-width: 900px;
-    height: unset;
+    /* height: unset; */
+    height: 520px;
     flex-direction: column-reverse;
+    justify-content: space-between;
     margin-bottom: 20px;
   }
 `;
 
 export const MainImage = styled.div`
   width: 80%;
+  border-radius: 10px;
   height: 636px;
   background: ${({ mainImage }) =>
     `url(${mainImage}) center/cover no-repeat border-box`};
@@ -41,16 +45,14 @@ export const MainImage = styled.div`
   @media (max-width: 1250px) {
     background: ${({ mainImage }) =>
       `url(${mainImage}) center/contain no-repeat border-box`};
+    height: 365px;
   }
 `;
 
 export const SmallImagesWrapper = styled.div`
   width: 20%;
   height: 636px;
-  margin: auto 0 auto 0;
-  /* display: flex;
-  flex-direction: column;
-  align-items: center; */
+  margin: auto 20px auto 0;
   overflow-y: scroll;
   justify-content: space-around;
 
@@ -59,54 +61,56 @@ export const SmallImagesWrapper = styled.div`
     padding-right: 10px;
   }
 
-  /* Track */
   &::-webkit-scrollbar-track {
-    /* background: rgba(0, 0, 0, 0.3); */
     background: inherit;
     border-radius: 20px;
   }
 
-  /* Handle */
   &::-webkit-scrollbar-thumb {
     background: rgba(0, 0, 0, 0.1);
     border-radius: 20px;
   }
 
-  /* Handle on hover */
   &::-webkit-scrollbar-thumb:hover {
     background: rgba(0, 0, 0, 0.4);
   }
 
   @media (max-width: 1250px) {
-    border: 1px solid red;
+    border: 1px solid blue;
     display: flex;
     flex-direction: row;
-    width: 95%;
-    overflow-x: auto;
-    scroll-snap-type-x: mandatory;
-    margin-top: 20px;
-    height: 120px;
+    width: 100%;
+    height: 140px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    margin: 0 auto;
     flex-shrink: 0;
+
+    &::-webkit-scrollbar {
+      height: 5px;
+    }
   }
 `;
 
-export const SmallImage = styled.div`
+export const SmallImage = styled.img`
   width: 95%;
-  height: 115px;
+  height: auto;
   display: block;
-  background: ${({ img, theme }) =>
-    `${theme.colors.lightGrey} url(${img}) center/contain no-repeat border-box`};
   cursor: pointer;
   border: 2px solid transparent;
   border-radius: 10px;
   margin: 15px auto;
+  /* overflow: hidden; */
 
   &:hover {
-    border-color: ${({ theme }) => theme.colors.black};
+    border-color: rgba(0, 0, 0, 0.1);
   }
 
   @media (max-width: 1250px) {
-    max-width: 125px;
+    width: 120px;
+    height: auto;
+    border: 1px solid red;
+    margin: 0 5px;
   }
 `;
 
